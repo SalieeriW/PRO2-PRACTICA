@@ -1,0 +1,116 @@
+\hypertarget{main_8cc}{}\doxysection{Referencia del Archivo main.\+cc}
+\label{main_8cc}\index{main.cc@{main.cc}}
+{\ttfamily \#include \char`\"{}Cluster.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para main.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cc@{main.cc}!main@{main}}
+\index{main@{main}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3             \{}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5     \textcolor{keywordtype}{string} id\_procesador;}
+\DoxyCodeLine{6     cin >> id\_procesador;}
+\DoxyCodeLine{7     \mbox{\hyperlink{classProcesador}{Procesador}} p1 (id\_procesador);}
+\DoxyCodeLine{8     \mbox{\hyperlink{classCluster}{Cluster}} c1 (p1);}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keywordtype}{string} id\_prioridad;}
+\DoxyCodeLine{11     cin >> id\_prioridad;}
+\DoxyCodeLine{12     \mbox{\hyperlink{classArea__de__Espera}{Area\_de\_Espera}} ae (id\_prioridad);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keywordtype}{string} command;}
+\DoxyCodeLine{15     cin >> command;}
+\DoxyCodeLine{16     \textcolor{keywordflow}{while} (command != \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18         \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}cc"{}}) \{}
+\DoxyCodeLine{19             c1.configurar\_cluster();}
+\DoxyCodeLine{20         \}}
+\DoxyCodeLine{21         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}mc"{}})\{}
+\DoxyCodeLine{22             \textcolor{keywordtype}{string} id\_procesador;}
+\DoxyCodeLine{23             cin >> id\_procesador;}
+\DoxyCodeLine{24             \mbox{\hyperlink{classProcesador}{Procesador}} p2 (id\_prioridad);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26             \mbox{\hyperlink{classCluster}{Cluster}} c2 (p2);}
+\DoxyCodeLine{27             c1.modificar\_cluster(p1,c2);}
+\DoxyCodeLine{28         \}}
+\DoxyCodeLine{29         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}ap"{}})\{}
+\DoxyCodeLine{30             \textcolor{keywordtype}{string} id\_prioridad;}
+\DoxyCodeLine{31             cin >> id\_prioridad;}
+\DoxyCodeLine{32             ae.alta\_prioridad(id\_prioridad);}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}bp"{}})\{}
+\DoxyCodeLine{35             \textcolor{keywordtype}{string} id\_prioridad;}
+\DoxyCodeLine{36             cin >> id\_prioridad;}
+\DoxyCodeLine{37             ae.baja\_prioridad(id\_prioridad);}
+\DoxyCodeLine{38         \}}
+\DoxyCodeLine{39         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}ape"{}})\{}
+\DoxyCodeLine{40             \textcolor{keywordtype}{int} id\_job, memory, t;}
+\DoxyCodeLine{41             cin >> id\_job >> memory >> t;}
+\DoxyCodeLine{42             \mbox{\hyperlink{classProceso}{Proceso}} job (id\_job, memory, t);}
+\DoxyCodeLine{43             ae.alta\_proceso\_espera(id\_prioridad, job);}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{45         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}app"{}})\{}
+\DoxyCodeLine{46             \textcolor{keywordtype}{int} id\_job, memory, t;}
+\DoxyCodeLine{47             cin >> id\_job >> memory >> t;}
+\DoxyCodeLine{48             \mbox{\hyperlink{classProceso}{Proceso}} job (id\_job, memory, t);}
+\DoxyCodeLine{49             c1.alta\_proceso\_procesador(p1, job);}
+\DoxyCodeLine{50         \}}
+\DoxyCodeLine{51         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}bpp"{}})\{}
+\DoxyCodeLine{52             \textcolor{keywordtype}{int} id\_job;}
+\DoxyCodeLine{53             cin >> id\_job;}
+\DoxyCodeLine{54             c1.baja\_proceso\_procesador(p1, id\_job);}
+\DoxyCodeLine{55         \}}
+\DoxyCodeLine{56         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}epc"{}})\{}
+\DoxyCodeLine{57             \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{58             cin >> n;}
+\DoxyCodeLine{59             c1.enviar\_procesos\_cluster(n);}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}at"{}})\{}
+\DoxyCodeLine{62             \textcolor{keywordtype}{int} t;}
+\DoxyCodeLine{63             cin >> t;}
+\DoxyCodeLine{64             c1.avanzar\_tiempo(t);}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}ipri"{}})\{}
+\DoxyCodeLine{67             ae.imprimir\_prioridad(id\_prioridad);}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}iae"{}})\{}
+\DoxyCodeLine{70             ae.imprimir\_area\_espera();}
+\DoxyCodeLine{71         \}}
+\DoxyCodeLine{72         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}ipro"{}})\{}
+\DoxyCodeLine{73             p1.imprimir\_procesador();}
+\DoxyCodeLine{74         \}}
+\DoxyCodeLine{75         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}ipc"{}})\{}
+\DoxyCodeLine{76             c1.imprimir\_procesador\_cluster();}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}iec"{}})\{}
+\DoxyCodeLine{79             c1.imprimir\_estructura\_cluster();}
+\DoxyCodeLine{80         \}}
+\DoxyCodeLine{81         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}cmp"{}})\{}
+\DoxyCodeLine{82             p1.compactar\_memoria\_procesador();}
+\DoxyCodeLine{83         \}}
+\DoxyCodeLine{84         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}cmc"{}})\{}
+\DoxyCodeLine{85             c1.compactar\_memoria\_cluster();}
+\DoxyCodeLine{86         \}}
+\DoxyCodeLine{87         cin >> command;}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}

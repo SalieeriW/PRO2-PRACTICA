@@ -1,0 +1,100 @@
+\hypertarget{class_proceso}{}\doxysection{Proceso Class Reference}
+\label{class_proceso}\index{Proceso@{Proceso}}
+
+
+Clase de proceso, hace referencia a tareas que tienen un identificador, memoria requierida y tiempo de ejecución.  
+
+
+
+
+{\ttfamily \#include $<$Proceso.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proceso_a632f57d6ec48e76c80fbeb7734c1148c}{Proceso}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_proceso_a4816bee1b97d41126160494109f84c42}{consultar\+\_\+tiempo}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de tiempo de ejecución. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proceso_ad133f53bba77755f779ef63b6e529cdb}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Operacion de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proceso_ac30da2d4218103a4bb7344483cecec89}{imprimir}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase de proceso, hace referencia a tareas que tienen un identificador, memoria requierida y tiempo de ejecución. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proceso_a632f57d6ec48e76c80fbeb7734c1148c}\label{class_proceso_a632f57d6ec48e76c80fbeb7734c1148c}} 
+\index{Proceso@{Proceso}!Proceso@{Proceso}}
+\index{Proceso@{Proceso}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{Proceso()}{Proceso()}}
+{\footnotesize\ttfamily Proceso\+::\+Proceso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultado es un proceso con el identificador, memoria y tiempo de ejecución correspondiente. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proceso_a4816bee1b97d41126160494109f84c42}\label{class_proceso_a4816bee1b97d41126160494109f84c42}} 
+\index{Proceso@{Proceso}!consultar\_tiempo@{consultar\_tiempo}}
+\index{consultar\_tiempo@{consultar\_tiempo}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_tiempo()}{consultar\_tiempo()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+tiempo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de tiempo de ejecución. 
+
+\begin{DoxyPrecond}{Precondition}
+El proceso del parametro implicito tiene tiempo de ejecución especificado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultado es el tiempo de ejecucion del proceso del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_proceso_ac30da2d4218103a4bb7344483cecec89}\label{class_proceso_ac30da2d4218103a4bb7344483cecec89}} 
+\index{Proceso@{Proceso}!imprimir@{imprimir}}
+\index{imprimir@{imprimir}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{imprimir()}{imprimir()}}
+{\footnotesize\ttfamily void Proceso\+::imprimir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se escribe por el canal de salida el identificador, memoria i el tiempo de ejecución del proceso del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_proceso_ad133f53bba77755f779ef63b6e529cdb}\label{class_proceso_ad133f53bba77755f779ef63b6e529cdb}} 
+\index{Proceso@{Proceso}!leer@{leer}}
+\index{leer@{leer}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void Proceso\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operacion de lectura. 
+
+\begin{DoxyPrecond}{Precondition}
+Hay en el canal de entrada el identificador del proceso, memoria que ocupa y el tiempo de ejecucion. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El proceso del parametro implicito pasa a tener los datos especificados. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_proceso_8hh}{Proceso.\+hh}}\end{DoxyCompactItemize}

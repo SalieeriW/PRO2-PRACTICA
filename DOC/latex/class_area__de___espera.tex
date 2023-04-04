@@ -1,0 +1,174 @@
+\hypertarget{class_area__de___espera}{}\doxysection{Area\+\_\+de\+\_\+\+Espera Class Reference}
+\label{class_area__de___espera}\index{Area\_de\_Espera@{Area\_de\_Espera}}
+
+
+Hace referencia a la area de espera de los procesos. Contiene procesos que se quieren tratar en el cluster classificados por prioridad. Puede usarse para crear o destruir una prioridad e insertar un nuevo proceso a la espera.  
+
+
+
+
+{\ttfamily \#include $<$Area\+\_\+de\+\_\+\+Espera.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_area__de___espera_a3231c321a9441f69a9e099827d4f3369}{Area\+\_\+de\+\_\+\+Espera}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto Se ejecuta automáticamente al declarar una nueva area de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}{alta\+\_\+prioridad}} (string id\+\_\+prioridad)
+\begin{DoxyCompactList}\small\item\em Modificadora que anade una nueva prioridad a la area de espera del parametro implicito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_area__de___espera_aa6fbf98c7a2d2540caba3561037fbf67}{baja\+\_\+prioridad}} (string id\+\_\+prioridad)
+\begin{DoxyCompactList}\small\item\em Modificadora que elimina una prioridad en la area de espera del parametro implicito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_area__de___espera_a8df87ca39287172b8f2b4ba4a4427df5}{alta\+\_\+proceso\+\_\+espera}} (string id\+\_\+prioridad, const \mbox{\hyperlink{class_proceso}{Proceso}} \&job)
+\begin{DoxyCompactList}\small\item\em Modificadora que anade un proceso a una prioridad de la area de espera del parametro implicito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_area__de___espera_a70e8bdfae6614dff0cf5083327bf8271}{modificar\+\_\+iessimo}} (int i, const \mbox{\hyperlink{class_prioridad}{Prioridad}} \&prioridad)
+\begin{DoxyCompactList}\small\item\em Modificadora que modifica la prioridad iessima de la area de espera del parametro implicito. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_prioridad}{Prioridad}} \mbox{\hyperlink{class_area__de___espera_a8951659881bbc7ea8f48896bf6dabe8c}{consultar\+\_\+iessimo}} (int i) const
+\begin{DoxyCompactList}\small\item\em Consultora de la iesima prioridad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_area__de___espera_a68b1bd241e3de344d4ec48ae932e92e4}{imprimir\+\_\+prioridad}} (string id\+\_\+prioridad) const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura de una prioridad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_area__de___espera_a2b71d440d461fe1c33d48caf54a43561}{imprimir\+\_\+area\+\_\+espera}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura de la area de espera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hace referencia a la area de espera de los procesos. Contiene procesos que se quieren tratar en el cluster classificados por prioridad. Puede usarse para crear o destruir una prioridad e insertar un nuevo proceso a la espera. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_area__de___espera_a3231c321a9441f69a9e099827d4f3369}\label{class_area__de___espera_a3231c321a9441f69a9e099827d4f3369}} 
+\index{Area\_de\_Espera@{Area\_de\_Espera}!Area\_de\_Espera@{Area\_de\_Espera}}
+\index{Area\_de\_Espera@{Area\_de\_Espera}!Area\_de\_Espera@{Area\_de\_Espera}}
+\doxysubsubsection{\texorpdfstring{Area\_de\_Espera()}{Area\_de\_Espera()}}
+{\footnotesize\ttfamily Area\+\_\+de\+\_\+\+Espera\+::\+Area\+\_\+de\+\_\+\+Espera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto Se ejecuta automáticamente al declarar una nueva area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultado es una area de espera sin ningúna prioridad ni proceso. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}\label{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}} 
+\index{Area\_de\_Espera@{Area\_de\_Espera}!alta\_prioridad@{alta\_prioridad}}
+\index{alta\_prioridad@{alta\_prioridad}!Area\_de\_Espera@{Area\_de\_Espera}}
+\doxysubsubsection{\texorpdfstring{alta\_prioridad()}{alta\_prioridad()}}
+{\footnotesize\ttfamily void Area\+\_\+de\+\_\+\+Espera\+::alta\+\_\+prioridad (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+prioridad }\end{DoxyParamCaption})}
+
+
+
+Modificadora que anade una nueva prioridad a la area de espera del parametro implicito. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha añadido una nueva prioridad identificado como id\+\_\+prior a la area de espera del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_area__de___espera_a8df87ca39287172b8f2b4ba4a4427df5}\label{class_area__de___espera_a8df87ca39287172b8f2b4ba4a4427df5}} 
+\index{Area\_de\_Espera@{Area\_de\_Espera}!alta\_proceso\_espera@{alta\_proceso\_espera}}
+\index{alta\_proceso\_espera@{alta\_proceso\_espera}!Area\_de\_Espera@{Area\_de\_Espera}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso\_espera()}{alta\_proceso\_espera()}}
+{\footnotesize\ttfamily void Area\+\_\+de\+\_\+\+Espera\+::alta\+\_\+proceso\+\_\+espera (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+prioridad,  }\item[{const \mbox{\hyperlink{class_proceso}{Proceso}} \&}]{job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que anade un proceso a una prioridad de la area de espera del parametro implicito. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe una prioridad con el identificador del parametro id\+\_\+prioridad. No existe previamente un proceso con el mismo identificador en dicha prioridad. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha anadido un proceso a una prioridad identificado como id\+\_\+prioridad que pertenece a la area de espera del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_area__de___espera_aa6fbf98c7a2d2540caba3561037fbf67}\label{class_area__de___espera_aa6fbf98c7a2d2540caba3561037fbf67}} 
+\index{Area\_de\_Espera@{Area\_de\_Espera}!baja\_prioridad@{baja\_prioridad}}
+\index{baja\_prioridad@{baja\_prioridad}!Area\_de\_Espera@{Area\_de\_Espera}}
+\doxysubsubsection{\texorpdfstring{baja\_prioridad()}{baja\_prioridad()}}
+{\footnotesize\ttfamily void Area\+\_\+de\+\_\+\+Espera\+::baja\+\_\+prioridad (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+prioridad }\end{DoxyParamCaption})}
+
+
+
+Modificadora que elimina una prioridad en la area de espera del parametro implicito. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe una prioridad identificada como el parametro id\+\_\+prioridad en la area de espera del parametro implicito. En caso que exista, no puede tener procesos pendientes en ella. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha eliminado la prioridad identificada como id\+\_\+prior a la area de espera del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_area__de___espera_a8951659881bbc7ea8f48896bf6dabe8c}\label{class_area__de___espera_a8951659881bbc7ea8f48896bf6dabe8c}} 
+\index{Area\_de\_Espera@{Area\_de\_Espera}!consultar\_iessimo@{consultar\_iessimo}}
+\index{consultar\_iessimo@{consultar\_iessimo}!Area\_de\_Espera@{Area\_de\_Espera}}
+\doxysubsubsection{\texorpdfstring{consultar\_iessimo()}{consultar\_iessimo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_prioridad}{Prioridad}} Area\+\_\+de\+\_\+\+Espera\+::consultar\+\_\+iessimo (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de la iesima prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe un numero i de prioridades en la area de espera del parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultado es la prioridad iesima de la area de espera del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_area__de___espera_a2b71d440d461fe1c33d48caf54a43561}\label{class_area__de___espera_a2b71d440d461fe1c33d48caf54a43561}} 
+\index{Area\_de\_Espera@{Area\_de\_Espera}!imprimir\_area\_espera@{imprimir\_area\_espera}}
+\index{imprimir\_area\_espera@{imprimir\_area\_espera}!Area\_de\_Espera@{Area\_de\_Espera}}
+\doxysubsubsection{\texorpdfstring{imprimir\_area\_espera()}{imprimir\_area\_espera()}}
+{\footnotesize\ttfamily void Area\+\_\+de\+\_\+\+Espera\+::imprimir\+\_\+area\+\_\+espera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura de la area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se han escrito los procesos pendientes de todas las prioridad de la area de espera del parametro implicito por orden decreciente de antiguedad desde su ultima alta y el numero de procesos enviados al cluster de cada prioridad, juntamente con el numero de procesos rechazado por el cluster. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_area__de___espera_a68b1bd241e3de344d4ec48ae932e92e4}\label{class_area__de___espera_a68b1bd241e3de344d4ec48ae932e92e4}} 
+\index{Area\_de\_Espera@{Area\_de\_Espera}!imprimir\_prioridad@{imprimir\_prioridad}}
+\index{imprimir\_prioridad@{imprimir\_prioridad}!Area\_de\_Espera@{Area\_de\_Espera}}
+\doxysubsubsection{\texorpdfstring{imprimir\_prioridad()}{imprimir\_prioridad()}}
+{\footnotesize\ttfamily void Area\+\_\+de\+\_\+\+Espera\+::imprimir\+\_\+prioridad (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+prioridad }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura de una prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe una prioridad identificada como id\+\_\+prioridad en la area de esoera del parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se han escrito los procesos pendientes de dicha prioridad por orden decreciente de antiguedad desde su ultima alta y el numero de procesos enviados al cluster, juntamente con el numero de procesos rechazado por el cluster. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_area__de___espera_a70e8bdfae6614dff0cf5083327bf8271}\label{class_area__de___espera_a70e8bdfae6614dff0cf5083327bf8271}} 
+\index{Area\_de\_Espera@{Area\_de\_Espera}!modificar\_iessimo@{modificar\_iessimo}}
+\index{modificar\_iessimo@{modificar\_iessimo}!Area\_de\_Espera@{Area\_de\_Espera}}
+\doxysubsubsection{\texorpdfstring{modificar\_iessimo()}{modificar\_iessimo()}}
+{\footnotesize\ttfamily void Area\+\_\+de\+\_\+\+Espera\+::modificar\+\_\+iessimo (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{const \mbox{\hyperlink{class_prioridad}{Prioridad}} \&}]{prioridad }\end{DoxyParamCaption})}
+
+
+
+Modificadora que modifica la prioridad iessima de la area de espera del parametro implicito. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe un numero i de prioridades en la area de espera del parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha substituido la iesima prioridad inicial de la area de espera del parametro implicito por la prioridad del parametro. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_area__de___espera_8hh}{Area\+\_\+de\+\_\+\+Espera.\+hh}}\end{DoxyCompactItemize}

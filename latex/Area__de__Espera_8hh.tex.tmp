@@ -1,0 +1,23 @@
+\hypertarget{Area__de__Espera_8hh}{}\doxysection{Referencia del Archivo Area\+\_\+de\+\_\+\+Espera.\+hh}
+\label{Area__de__Espera_8hh}\index{Area\_de\_Espera.hh@{Area\_de\_Espera.hh}}
+
+
+Especificación de la clase Area de Espera.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Proceso.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para Area\+\_\+de\+\_\+\+Espera.\+hh\+:
+% FIG 0
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:
+% FIG 1
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classArea__de__Espera}{Area\+\_\+de\+\_\+\+Espera}}
+\begin{DoxyCompactList}\small\item\em Hace referencia a la area de espera de los procesos. Contiene procesos que se quiere tratar en el cluster classificados por prioridad. Puede usarse para crear o destruir una prioridad e insertar un nuevo proceso a la espera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Especificación de la clase Area de Espera. 
+

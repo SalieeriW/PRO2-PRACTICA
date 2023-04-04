@@ -1,0 +1,244 @@
+\hypertarget{class_cluster}{}\doxysection{Cluster Class Reference}
+\label{class_cluster}\index{Cluster@{Cluster}}
+
+
+Esta clase hace referencia a un \mbox{\hyperlink{class_cluster}{Cluster}} un conjunto de procesadores (minimo 1) que realizan procesos y tareas. Dispone de un contador de tiempo y permite operar con los procesadores\+: asignar tareas (procesos) a partir de la area de espera o inserta de forma directa a un procesador del \mbox{\hyperlink{class_cluster}{Cluster}} o bien compactar la memoria de estos.  
+
+
+
+
+{\ttfamily \#include $<$Cluster.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cluster_aee7feb1d599d4c8fda6c3ee83e86ba81}{Cluster}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}{modificar\+\_\+cluster}} (string id\+\_\+procesador, const \mbox{\hyperlink{class_cluster}{Cluster}} \&c)
+\begin{DoxyCompactList}\small\item\em Modificadora que permite fusionar dos clusters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}{compactar\+\_\+memoria\+\_\+procesador}} (string id\+\_\+procesador)
+\begin{DoxyCompactList}\small\item\em Modificadora que compacta la memoria de un procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}{compactar\+\_\+memoria\+\_\+cluster}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora que compacta las memorias de todos los procesadores del cluster. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a1fb143dea5b8ed04b6c00b42d29d9142}{enviar\+\_\+procesos\+\_\+cluster}} (int n, \mbox{\hyperlink{class_area__de___espera}{Area\+\_\+de\+\_\+\+Espera}} \&ae)
+\begin{DoxyCompactList}\small\item\em Modificadora que envia n procesos (eligidos tienendo en cuenta el orden de prioridad, y los más antiguos) de una area de espera a los procesadores del cluster del parametro implicito. Si no hay espacio, entonces el proceso es rechazado y devuelto a la area de espera original. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a49ec4041303d756070501975822ec374}{alta\+\_\+proceso\+\_\+procesador}} (string id\+\_\+procesador, const \mbox{\hyperlink{class_proceso}{Proceso}} \&job)
+\begin{DoxyCompactList}\small\item\em Modificadora que envia un proceso especificado en el parametro job a un procesador identificado como id\+\_\+procesador del parametro. El proceso es colocado al hueco más ajustado y ocupa la memoria que se especifica en job. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}{baja\+\_\+proceso\+\_\+procesador}} (string id\+\_\+procesador, int id\+\_\+job)
+\begin{DoxyCompactList}\small\item\em Modificadora que elimina un proceso con identificador id\+\_\+job que se esta ejecutando en un procesador identificado como id\+\_\+procesador del cluster. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}{avanzar\+\_\+tiempo}} (int t)
+\begin{DoxyCompactList}\small\item\em Modificadora el contador tiempo transcurrido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\+\_\+cluster}} ()
+\begin{DoxyCompactList}\small\item\em Operacion de lectura de \mbox{\hyperlink{class_cluster}{Cluster}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a974c440062deed4ea77a511d42f6629c}{imprimir\+\_\+procesador\+\_\+cluster}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura del \mbox{\hyperlink{class_cluster}{Cluster}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a285714ee7b0d682682fbb634d2170f04}{imprimir\+\_\+estructura\+\_\+cluster}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura del \mbox{\hyperlink{class_cluster}{Cluster}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a5379829cce87db8038e42f421ebc8554}{imprimir\+\_\+procesador}} (string id\+\_\+procesador) const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura del procesador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta clase hace referencia a un \mbox{\hyperlink{class_cluster}{Cluster}} un conjunto de procesadores (minimo 1) que realizan procesos y tareas. Dispone de un contador de tiempo y permite operar con los procesadores\+: asignar tareas (procesos) a partir de la area de espera o inserta de forma directa a un procesador del \mbox{\hyperlink{class_cluster}{Cluster}} o bien compactar la memoria de estos. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cluster_aee7feb1d599d4c8fda6c3ee83e86ba81}\label{class_cluster_aee7feb1d599d4c8fda6c3ee83e86ba81}} 
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{Cluster()}{Cluster()}}
+{\footnotesize\ttfamily Cluster\+::\+Cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultado es un \mbox{\hyperlink{class_cluster}{Cluster}} vacio. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cluster_a49ec4041303d756070501975822ec374}\label{class_cluster_a49ec4041303d756070501975822ec374}} 
+\index{Cluster@{Cluster}!alta\_proceso\_procesador@{alta\_proceso\_procesador}}
+\index{alta\_proceso\_procesador@{alta\_proceso\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso\_procesador()}{alta\_proceso\_procesador()}}
+{\footnotesize\ttfamily void Cluster\+::alta\+\_\+proceso\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador,  }\item[{const \mbox{\hyperlink{class_proceso}{Proceso}} \&}]{job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que envia un proceso especificado en el parametro job a un procesador identificado como id\+\_\+procesador del parametro. El proceso es colocado al hueco más ajustado y ocupa la memoria que se especifica en job. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe un procesador con identificador de id\+\_\+procesador que no tiene previamente un proceso nombrado igual que job (proceso del parametro). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ejecuta el proceso job en el procesador id\+\_\+procesador del cluster del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}\label{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}} 
+\index{Cluster@{Cluster}!avanzar\_tiempo@{avanzar\_tiempo}}
+\index{avanzar\_tiempo@{avanzar\_tiempo}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{avanzar\_tiempo()}{avanzar\_tiempo()}}
+{\footnotesize\ttfamily void Cluster\+::avanzar\+\_\+tiempo (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Modificadora el contador tiempo transcurrido. 
+
+\begin{DoxyPrecond}{Precondition}
+t \texorpdfstring{$>$}{>}= 0. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha avanzado t unidades de tiempo. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}\label{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}} 
+\index{Cluster@{Cluster}!baja\_proceso\_procesador@{baja\_proceso\_procesador}}
+\index{baja\_proceso\_procesador@{baja\_proceso\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{baja\_proceso\_procesador()}{baja\_proceso\_procesador()}}
+{\footnotesize\ttfamily void Cluster\+::baja\+\_\+proceso\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador,  }\item[{int}]{id\+\_\+job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que elimina un proceso con identificador id\+\_\+job que se esta ejecutando en un procesador identificado como id\+\_\+procesador del cluster. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe un procesador con identificador de id\+\_\+procesador y esta ejecutando un proceso nombrado igual que id\+\_\+job. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha eliminado el proceso identificado como id\+\_\+job que se estaba ejecutando en un procesador nombrado id\+\_\+procesador del cluster del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}\label{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}} 
+\index{Cluster@{Cluster}!compactar\_memoria\_cluster@{compactar\_memoria\_cluster}}
+\index{compactar\_memoria\_cluster@{compactar\_memoria\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{compactar\_memoria\_cluster()}{compactar\_memoria\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::compactar\+\_\+memoria\+\_\+cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora que compacta las memorias de todos los procesadores del cluster. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se han movido todos los procesos de las memorias de los procesadores del cluster del parametro implici al principio, sin dejar huecos ni solapar-\/se. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}\label{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}} 
+\index{Cluster@{Cluster}!compactar\_memoria\_procesador@{compactar\_memoria\_procesador}}
+\index{compactar\_memoria\_procesador@{compactar\_memoria\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{compactar\_memoria\_procesador()}{compactar\_memoria\_procesador()}}
+{\footnotesize\ttfamily void Cluster\+::compactar\+\_\+memoria\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador }\end{DoxyParamCaption})}
+
+
+
+Modificadora que compacta la memoria de un procesador. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe un procesador con el el identifacador como el parametro id\+\_\+procesador en el cluster. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se han movido todos los procesos de la memoria del procesador al principio, sin dejar huecos ni que se solapen entre procesos. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}\label{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}} 
+\index{Cluster@{Cluster}!configurar\_cluster@{configurar\_cluster}}
+\index{configurar\_cluster@{configurar\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{configurar\_cluster()}{configurar\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::configurar\+\_\+cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operacion de lectura de \mbox{\hyperlink{class_cluster}{Cluster}}. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape Cierto\texorpdfstring{$>$}{>}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El \mbox{\hyperlink{class_cluster}{Cluster}} del parametro implicito queda inicializado con los procesadores y sus respectivas memorias. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a1fb143dea5b8ed04b6c00b42d29d9142}\label{class_cluster_a1fb143dea5b8ed04b6c00b42d29d9142}} 
+\index{Cluster@{Cluster}!enviar\_procesos\_cluster@{enviar\_procesos\_cluster}}
+\index{enviar\_procesos\_cluster@{enviar\_procesos\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{enviar\_procesos\_cluster()}{enviar\_procesos\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::enviar\+\_\+procesos\+\_\+cluster (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{\mbox{\hyperlink{class_area__de___espera}{Area\+\_\+de\+\_\+\+Espera}} \&}]{ae }\end{DoxyParamCaption})}
+
+
+
+Modificadora que envia n procesos (eligidos tienendo en cuenta el orden de prioridad, y los más antiguos) de una area de espera a los procesadores del cluster del parametro implicito. Si no hay espacio, entonces el proceso es rechazado y devuelto a la area de espera original. 
+
+\begin{DoxyPrecond}{Precondition}
+n \texorpdfstring{$>$}{>}= 0. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se han enviado los n procesos de la area de espera a los procesadores del cluster del parametro implicito y se ha actualizado en la area de espera el numero de procesos acceptados y rechazados en las prioridades correspondentes. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a285714ee7b0d682682fbb634d2170f04}\label{class_cluster_a285714ee7b0d682682fbb634d2170f04}} 
+\index{Cluster@{Cluster}!imprimir\_estructura\_cluster@{imprimir\_estructura\_cluster}}
+\index{imprimir\_estructura\_cluster@{imprimir\_estructura\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{imprimir\_estructura\_cluster()}{imprimir\_estructura\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::imprimir\+\_\+estructura\+\_\+cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura del \mbox{\hyperlink{class_cluster}{Cluster}}. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape Cierto\texorpdfstring{$>$}{>}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha escrito la estructura los procesadores del \mbox{\hyperlink{class_cluster}{Cluster}} por el canal. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a5379829cce87db8038e42f421ebc8554}\label{class_cluster_a5379829cce87db8038e42f421ebc8554}} 
+\index{Cluster@{Cluster}!imprimir\_procesador@{imprimir\_procesador}}
+\index{imprimir\_procesador@{imprimir\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{imprimir\_procesador()}{imprimir\_procesador()}}
+{\footnotesize\ttfamily void Cluster\+::imprimir\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura del procesador. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se escribe por orden creciente de primera posición de memoria en el canal de salida los procesos que se esta ejecutando en el procesador con identificador id\+\_\+procesador y su posición de memoria, juntamente con los datos de cada proceso. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a974c440062deed4ea77a511d42f6629c}\label{class_cluster_a974c440062deed4ea77a511d42f6629c}} 
+\index{Cluster@{Cluster}!imprimir\_procesador\_cluster@{imprimir\_procesador\_cluster}}
+\index{imprimir\_procesador\_cluster@{imprimir\_procesador\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{imprimir\_procesador\_cluster()}{imprimir\_procesador\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::imprimir\+\_\+procesador\+\_\+cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura del \mbox{\hyperlink{class_cluster}{Cluster}}. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se escribe para todos los procesadores en orden creciente de identificador en el canal de salida, los procesos que se esta ejecutando en el procesador con identificador id\+\_\+procesador y su posición de memoria en orden creciente de primera posición de memoria, juntamente con los datos de cada proceso. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}\label{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}} 
+\index{Cluster@{Cluster}!modificar\_cluster@{modificar\_cluster}}
+\index{modificar\_cluster@{modificar\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{modificar\_cluster()}{modificar\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::modificar\+\_\+cluster (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador,  }\item[{const \mbox{\hyperlink{class_cluster}{Cluster}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Modificadora que permite fusionar dos clusters. 
+
+\begin{DoxyPrecond}{Precondition}
+Existe el procesador p en el parametro implicito y este no tiene procesadores auxiliaries ni tampoco procesos en ejecución. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha colocado el \mbox{\hyperlink{class_cluster}{Cluster}} del parametro en el lugar de p, substituyendo este por la raiz del \mbox{\hyperlink{class_cluster}{Cluster}} del parametro. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cluster_8hh}{Cluster.\+hh}}\end{DoxyCompactItemize}
