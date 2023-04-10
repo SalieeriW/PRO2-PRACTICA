@@ -1,0 +1,158 @@
+\hypertarget{class_proceso}{}\doxysection{Referencia de la Clase Proceso}
+\label{class_proceso}\index{Proceso@{Proceso}}
+
+
+Clase de proceso, hace referencia a tareas que tienen un identificador, memoria requierida y tiempo de ejecución. Dispone de operaciones para consultar cada datos de un proceso. Permite leer y escribir los datos de cada proceso.  
+
+
+
+
+{\ttfamily \#include $<$Proceso.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proceso_a632f57d6ec48e76c80fbeb7734c1148c}{Proceso}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_proceso_ae7cd237a2f4dd8c3e6502898f2aad55f}{actualizar\+\_\+proceso}} (int t\+\_\+procesador)
+\begin{DoxyCompactList}\small\item\em Modificadora que actualiza el estado del proceso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_proceso_a33b52579d6ee93986d33341bacc86521}{consultar\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del identificador de un proceso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_proceso_a4816bee1b97d41126160494109f84c42}{consultar\+\_\+tiempo}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de tiempo de ejecución de un proceso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_proceso_a30a7b87bcaea734f740fe4e7c4475d30}{consultar\+\_\+tamano}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de tamano de un proceso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proceso_ad133f53bba77755f779ef63b6e529cdb}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Operacion de lectura de un proceso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proceso_ac30da2d4218103a4bb7344483cecec89}{imprimir}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura de un proceso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase de proceso, hace referencia a tareas que tienen un identificador, memoria requierida y tiempo de ejecución. Dispone de operaciones para consultar cada datos de un proceso. Permite leer y escribir los datos de cada proceso. 
+
+Definición en la línea \mbox{\hyperlink{_proceso_8hh_source_l00018}{18}} del archivo \mbox{\hyperlink{_proceso_8hh_source}{Proceso.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_proceso_a632f57d6ec48e76c80fbeb7734c1148c}\label{class_proceso_a632f57d6ec48e76c80fbeb7734c1148c}} 
+\index{Proceso@{Proceso}!Proceso@{Proceso}}
+\index{Proceso@{Proceso}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{Proceso()}{Proceso()}}
+{\footnotesize\ttfamily Proceso\+::\+Proceso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un proceso vacio, sin datos especificados. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_proceso_ae7cd237a2f4dd8c3e6502898f2aad55f}\label{class_proceso_ae7cd237a2f4dd8c3e6502898f2aad55f}} 
+\index{Proceso@{Proceso}!actualizar\_proceso@{actualizar\_proceso}}
+\index{actualizar\_proceso@{actualizar\_proceso}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{actualizar\_proceso()}{actualizar\_proceso()}}
+{\footnotesize\ttfamily bool Proceso\+::actualizar\+\_\+proceso (\begin{DoxyParamCaption}\item[{int}]{t\+\_\+procesador }\end{DoxyParamCaption})}
+
+
+
+Modificadora que actualiza el estado del proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape t\+\_\+procesador} \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si el proceso ha terminado. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_proceso_a33b52579d6ee93986d33341bacc86521}\label{class_proceso_a33b52579d6ee93986d33341bacc86521}} 
+\index{Proceso@{Proceso}!consultar\_id@{consultar\_id}}
+\index{consultar\_id@{consultar\_id}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_id()}{consultar\_id()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del identificador de un proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+El proceso del parametro implicito tiene un identificador especificado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el identificador del proceso del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_proceso_a4816bee1b97d41126160494109f84c42}\label{class_proceso_a4816bee1b97d41126160494109f84c42}} 
+\index{Proceso@{Proceso}!consultar\_tiempo@{consultar\_tiempo}}
+\index{consultar\_tiempo@{consultar\_tiempo}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_tiempo()}{consultar\_tiempo()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+tiempo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de tiempo de ejecución de un proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+El proceso del parametro implicito tiene tiempo de ejecución especificado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el tiempo de ejecucion del proceso del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_proceso_a30a7b87bcaea734f740fe4e7c4475d30}\label{class_proceso_a30a7b87bcaea734f740fe4e7c4475d30}} 
+\index{Proceso@{Proceso}!consultar\_tamano@{consultar\_tamano}}
+\index{consultar\_tamano@{consultar\_tamano}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_tamano()}{consultar\_tamano()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+tamano (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de tamano de un proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+El proceso del parametro implicito tiene memoria requierida especificado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la memoria requerida del proceso del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_proceso_ad133f53bba77755f779ef63b6e529cdb}\label{class_proceso_ad133f53bba77755f779ef63b6e529cdb}} 
+\index{Proceso@{Proceso}!leer@{leer}}
+\index{leer@{leer}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void Proceso\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operacion de lectura de un proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+Hay en el canal de entrada el identificador del proceso, memoria que ocupa y el tiempo de ejecucion. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El proceso del parametro implicito pasa a tener los datos especificados. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_proceso_ac30da2d4218103a4bb7344483cecec89}\label{class_proceso_ac30da2d4218103a4bb7344483cecec89}} 
+\index{Proceso@{Proceso}!imprimir@{imprimir}}
+\index{imprimir@{imprimir}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{imprimir()}{imprimir()}}
+{\footnotesize\ttfamily void Proceso\+::imprimir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura de un proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe por el canal de salida el identificador, memoria y el tiempo de ejecución del proceso del parametro implicito. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_proceso_8hh}{Proceso.\+hh}}\end{DoxyCompactItemize}

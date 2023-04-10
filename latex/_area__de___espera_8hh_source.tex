@@ -1,0 +1,52 @@
+\hypertarget{_area__de___espera_8hh_source}{}\doxysection{Area\+\_\+de\+\_\+\+Espera.\+hh}
+\mbox{\hyperlink{_area__de___espera_8hh}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ AREA\_DE\_ESPERA\_HH}}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00006}00006\ \textcolor{preprocessor}{\#define\ AREA\_DE\_ESPERA\_HH}}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cluster_8hh}{Cluster.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_prioridad_8hh}{Prioridad.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_proceso_8hh}{Proceso.hh}}"{}}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00021}\mbox{\hyperlink{class_area__de___espera}{00021}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_area__de___espera}{Area\_de\_Espera}}\ \{}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Constructoras}}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00032}\mbox{\hyperlink{class_area__de___espera_a3231c321a9441f69a9e099827d4f3369}{00032}}\ \ \ \ \ \mbox{\hyperlink{class_area__de___espera_a3231c321a9441f69a9e099827d4f3369}{Area\_de\_Espera}}();}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ Modificadoras}}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00041}\mbox{\hyperlink{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}{00041}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}{alta\_prioridad}}(\textcolor{keywordtype}{string}\ id\_prioridad);}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00050}\mbox{\hyperlink{class_area__de___espera_aa6fbf98c7a2d2540caba3561037fbf67}{00050}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_area__de___espera_aa6fbf98c7a2d2540caba3561037fbf67}{baja\_prioridad}}(\textcolor{keywordtype}{string}\ id\_prioridad);}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00058}\mbox{\hyperlink{class_area__de___espera_a8df87ca39287172b8f2b4ba4a4427df5}{00058}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_area__de___espera_a8df87ca39287172b8f2b4ba4a4427df5}{alta\_proceso\_espera}}(\textcolor{keywordtype}{string}\ id\_prioridad,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_proceso}{Proceso}}\ \&job);}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00068}\mbox{\hyperlink{class_area__de___espera_adce13778ff8b0b5eb46701dc1b031515}{00068}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_area__de___espera_adce13778ff8b0b5eb46701dc1b031515}{enviar\_procesos\_cluster}}(\textcolor{keywordtype}{int}\ n,\ \mbox{\hyperlink{class_cluster}{Cluster}}\ \&c);\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ Consultoras}}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00077}\mbox{\hyperlink{class_area__de___espera_ab27220ebfbb4809e998660d965d3c15d}{00077}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_area__de___espera_ab27220ebfbb4809e998660d965d3c15d}{existe\_prioridad}}(\textcolor{keywordtype}{string}\ id\_prioridad)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00084}\mbox{\hyperlink{class_area__de___espera_a594a0e452ee08d9ccabca028e5834241}{00084}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_area__de___espera_a594a0e452ee08d9ccabca028e5834241}{ocupado}}(\textcolor{keywordtype}{string}\ id\_prioridad)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00092}\mbox{\hyperlink{class_area__de___espera_a77c0695d58663eacaeb6a825ab574476}{00092}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_area__de___espera_a77c0695d58663eacaeb6a825ab574476}{existe\_proceso}}(\textcolor{keywordtype}{string}\ id\_prioridad,\ \textcolor{keywordtype}{int}\ id\_proceso)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//Lectura\ y\ Escriptura}}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00095}00095\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00103}\mbox{\hyperlink{class_area__de___espera_a68b1bd241e3de344d4ec48ae932e92e4}{00103}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_area__de___espera_a68b1bd241e3de344d4ec48ae932e92e4}{imprimir\_prioridad}}(\textcolor{keywordtype}{string}\ id\_prioridad)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00112}\mbox{\hyperlink{class_area__de___espera_a2b71d440d461fe1c33d48caf54a43561}{00112}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_area__de___espera_a2b71d440d461fe1c33d48caf54a43561}{imprimir\_area\_espera}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00115}00115\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00117}00117\ \};}
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_area__de___espera_8hh_source_l00120}00120\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

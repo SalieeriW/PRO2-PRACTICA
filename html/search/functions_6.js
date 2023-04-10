@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cc']]],
-  ['modificar_5fcluster_1',['modificar_cluster',['../classCluster.html#a534bf65c5e00f1dc1ac39d574aa83dfc',1,'Cluster']]],
-  ['modificar_5fproceso_5fmemoria_2',['modificar_proceso_memoria',['../classProceso.html#af1298d1fcffbc467ab7dbbd476b1c0d5',1,'Proceso']]],
-  ['modificar_5fproceso_5ftiempo_3',['modificar_proceso_tiempo',['../classProceso.html#abd0d4d2bd4210a0b3d95b1fc7bdb6383',1,'Proceso']]]
+  ['main_0',['main',['../program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'program.cc']]],
+  ['max_5fespacio_5factual_1',['max_espacio_actual',['../class_procesador.html#a766bd694b58841c71f506a793ddea1e0',1,'Procesador']]],
+  ['modificar_5facceptados_5frechazados_2',['modificar_acceptados_rechazados',['../class_prioridad.html#affb0f3a8050e58756dde93e20370c948',1,'Prioridad']]],
+  ['modificar_5fcluster_3',['modificar_cluster',['../class_cluster.html#a1cf06f2554ac115c239a05ebc8858a6f',1,'Cluster']]]
 ];

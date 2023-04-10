@@ -1,0 +1,8 @@
+<map id="main.cc" name="main.cc">
+<area shape="rect" id="node1" title="Programa princial." alt="" coords="131,5,199,31"/>
+<area shape="rect" id="node2" href="$_cluster_8hh.html" title="Especificación de la clase Cluster." alt="" coords="125,79,206,104"/>
+<area shape="rect" id="node3" href="$_area__de___espera_8hh.html" title="Especificación de la clase Area de Espera." alt="" coords="5,152,141,177"/>
+<area shape="rect" id="node5" href="$_proceso_8hh.html" title="Especificación de la clase Proceso." alt="" coords="135,299,223,324"/>
+<area shape="rect" id="node6" href="$_procesador_8hh.html" title="Especificación de la clase Procesador." alt="" coords="125,225,232,251"/>
+<area shape="rect" id="node4" href="$_prioridad_8hh.html" title="Especificación de la clase Prioridad." alt="" coords="11,225,101,251"/>
+</map>

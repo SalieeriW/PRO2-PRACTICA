@@ -1,0 +1,159 @@
+\hypertarget{program_8cc}{}\doxysection{Referencia del Archivo program.\+cc}
+\label{program_8cc}\index{program.cc@{program.cc}}
+
+
+Programa princial.  
+
+
+Dependencia gráfica adjunta para program.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa princial. 
+
+Suponemos que los datos leídos son siempre correctos, en caso contrario, se imprimirá un mensaje de error internamente por la funciones principales de cada clase. Para acceder a las opciones disponibles usaremos comandos. 
+
+Definición en el archivo \mbox{\hyperlink{program_8cc_source}{program.\+cc}}.
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.cc@{program.cc}!main@{main}}
+\index{main@{main}!program.cc@{program.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{program_8cc_source_l00024}{24}} del archivo \mbox{\hyperlink{program_8cc_source}{program.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_cluster}{Cluster}}\ c1;}
+\DoxyCodeLine{00027\ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\_cluster}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_area__de___espera}{Area\_de\_Espera}}\ ae;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{00031\ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}{alta\_prioridad}}(id\_prioridad);}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{string}\ command;}
+\DoxyCodeLine{00039\ \ \ \ \ cin\ >>\ command;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{while}\ (command\ !=\ \textcolor{stringliteral}{"{}fin"{}})\ \{}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}cc"{}})\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\_cluster}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}mc"{}})\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cluster}{Cluster}}\ c2;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ c2.\mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\_cluster}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}{modificar\_cluster}}(id\_procesador,c2);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ap"{}})\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}{alta\_prioridad}}(id\_prioridad);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}bp"{}})\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_aa6fbf98c7a2d2540caba3561037fbf67}{baja\_prioridad}}(id\_prioridad);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ape"{}})\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_proceso}{Proceso}}\ job;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ job.\mbox{\hyperlink{class_proceso_ad133f53bba77755f779ef63b6e529cdb}{leer}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_a8df87ca39287172b8f2b4ba4a4427df5}{alta\_proceso\_espera}}(id\_prioridad,\ job);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}app"{}})\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_proceso}{Proceso}}\ job;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ job.\mbox{\hyperlink{class_proceso_ad133f53bba77755f779ef63b6e529cdb}{leer}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a49ec4041303d756070501975822ec374}{alta\_proceso\_procesador}}(id\_procesador,\ job);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}bpp"{}})\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id\_job;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_job;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}{baja\_proceso\_procesador}}(id\_procesador,\ id\_job);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}epc"{}})\{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_adce13778ff8b0b5eb46701dc1b031515}{enviar\_procesos\_cluster}}(n,c1);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}at"{}})\{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ t;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ t;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}{avanzar\_tiempo}}(t);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ipri"{}})\{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_a68b1bd241e3de344d4ec48ae932e92e4}{imprimir\_prioridad}}(id\_prioridad);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}iae"{}})\{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_a2b71d440d461fe1c33d48caf54a43561}{imprimir\_area\_espera}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ipro"{}})\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a5379829cce87db8038e42f421ebc8554}{imprimir\_procesador}}(id\_procesador);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ipc"{}})\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a974c440062deed4ea77a511d42f6629c}{imprimir\_procesador\_cluster}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}iec"{}})\{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a285714ee7b0d682682fbb634d2170f04}{imprimir\_estructura\_cluster}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}cmp"{}})\{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}{compactar\_memoria\_procesador}}(id\_procesador);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}cmc"{}})\{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}{compactar\_memoria\_cluster}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ cin\ >>\ command;}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}

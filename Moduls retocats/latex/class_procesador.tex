@@ -1,0 +1,212 @@
+\hypertarget{class_procesador}{}\doxysection{Referencia de la Clase Procesador}
+\label{class_procesador}\index{Procesador@{Procesador}}
+
+
+Clase de procesador, hace referencia a un procesador que puede ejercutar procesos. Dispone de operaciones para anadir o eliminar un proceso al procesador, compactar la memoria de un procesador, avanzar el reloj de un procesador. Tambíen permite hacer consultas sobre si un procesador está ocupado, la memoria disponible y la existencia de un proceso. Por ultimo, tiene operaciones de lectura y escriptura para leer los datos de un procesador y escribir los procesos de estos.  
+
+
+
+
+{\ttfamily \#include $<$Procesador.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_procesador_aacfa2a06c7d44636ecfb0338bebbfa8b}{Procesador}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto Se crea un procesador vacio. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_procesador_a26c586d1082df28504d6488eeb26656e}{alta\+\_\+proceso\+\_\+procesador}} (const \mbox{\hyperlink{class_proceso}{Proceso}} \&job)
+\begin{DoxyCompactList}\small\item\em Modificadora que anade un proceso a un procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_procesador_aa990ba761c1847a37f9628d080d987a8}{baja\+\_\+proceso\+\_\+procesador}} (int id\+\_\+job)
+\begin{DoxyCompactList}\small\item\em Modificadora que elimina un proceso de un procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_procesador_a6c5d44f2b2e9aee6553a77d3056626f0}{compactar\+\_\+memoria\+\_\+procesador}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora que compacta la memoria de un procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_procesador_a1ef2286ffd03553265dd32a73f0ecc1f}{avanzar\+\_\+tiempo\+\_\+procesador}} (int t)
+\begin{DoxyCompactList}\small\item\em Modificadora que avanza {\itshape t} unidades de tiempo del procesador del parametro implicito. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_procesador_afcae0deb3ee1d0d4ec462f000934ac95}{ocupado}} () const
+\begin{DoxyCompactList}\small\item\em Consultora que indica si un procesador tiene procesos en ejecucion. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_procesador_addd894616890e9957134a40d1b6c222c}{existe\+\_\+proceso}} (string id\+\_\+proceso) const
+\begin{DoxyCompactList}\small\item\em Consultora de existencia de un proceso en un procesador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_procesador_a766bd694b58841c71f506a793ddea1e0}{max\+\_\+espacio\+\_\+actual}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del tamaño del hueco más grande en la memoria de un procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_procesador_af537c88f3e0f75f244945af6472dd972}{configurar\+\_\+procesador}} ()
+\begin{DoxyCompactList}\small\item\em Operacion de lectura del procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_procesador_a878f54f3bf0c2252046346b0b3ed069b}{imprimir\+\_\+procesos}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura de los procesos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase de procesador, hace referencia a un procesador que puede ejercutar procesos. Dispone de operaciones para anadir o eliminar un proceso al procesador, compactar la memoria de un procesador, avanzar el reloj de un procesador. Tambíen permite hacer consultas sobre si un procesador está ocupado, la memoria disponible y la existencia de un proceso. Por ultimo, tiene operaciones de lectura y escriptura para leer los datos de un procesador y escribir los procesos de estos. 
+
+Definición en la línea \mbox{\hyperlink{_procesador_8hh_source_l00018}{18}} del archivo \mbox{\hyperlink{_procesador_8hh_source}{Procesador.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_procesador_aacfa2a06c7d44636ecfb0338bebbfa8b}\label{class_procesador_aacfa2a06c7d44636ecfb0338bebbfa8b}} 
+\index{Procesador@{Procesador}!Procesador@{Procesador}}
+\index{Procesador@{Procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{Procesador()}{Procesador()}}
+{\footnotesize\ttfamily Procesador\+::\+Procesador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto Se crea un procesador vacio. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un procesador vacio. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_procesador_a26c586d1082df28504d6488eeb26656e}\label{class_procesador_a26c586d1082df28504d6488eeb26656e}} 
+\index{Procesador@{Procesador}!alta\_proceso\_procesador@{alta\_proceso\_procesador}}
+\index{alta\_proceso\_procesador@{alta\_proceso\_procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso\_procesador()}{alta\_proceso\_procesador()}}
+{\footnotesize\ttfamily bool Procesador\+::alta\+\_\+proceso\+\_\+procesador (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_proceso}{Proceso}} \&}]{job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que anade un proceso a un procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+Hay memoria suficiente para que el proceso quepa. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si se ha podido anadir el proceso en el procesador, si se ha podido, el procesador original tendrá un nuevo proceso {\itshape job} en la posición de memoria donde quede más ajustado. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_procesador_aa990ba761c1847a37f9628d080d987a8}\label{class_procesador_aa990ba761c1847a37f9628d080d987a8}} 
+\index{Procesador@{Procesador}!baja\_proceso\_procesador@{baja\_proceso\_procesador}}
+\index{baja\_proceso\_procesador@{baja\_proceso\_procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{baja\_proceso\_procesador()}{baja\_proceso\_procesador()}}
+{\footnotesize\ttfamily void Procesador\+::baja\+\_\+proceso\+\_\+procesador (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que elimina un proceso de un procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un proceso identificado como el parametro {\itshape id\+\_\+job} en procesador del parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha eliminado el proceso con {\itshape id\+\_\+job} del procesador del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_procesador_a6c5d44f2b2e9aee6553a77d3056626f0}\label{class_procesador_a6c5d44f2b2e9aee6553a77d3056626f0}} 
+\index{Procesador@{Procesador}!compactar\_memoria\_procesador@{compactar\_memoria\_procesador}}
+\index{compactar\_memoria\_procesador@{compactar\_memoria\_procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{compactar\_memoria\_procesador()}{compactar\_memoria\_procesador()}}
+{\footnotesize\ttfamily void Procesador\+::compactar\+\_\+memoria\+\_\+procesador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora que compacta la memoria de un procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han colocado todos los procesos del procesador del parametro implicito al principio de la memoria, sin dejar huecos, ni solaparse entre ellos. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_procesador_a1ef2286ffd03553265dd32a73f0ecc1f}\label{class_procesador_a1ef2286ffd03553265dd32a73f0ecc1f}} 
+\index{Procesador@{Procesador}!avanzar\_tiempo\_procesador@{avanzar\_tiempo\_procesador}}
+\index{avanzar\_tiempo\_procesador@{avanzar\_tiempo\_procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{avanzar\_tiempo\_procesador()}{avanzar\_tiempo\_procesador()}}
+{\footnotesize\ttfamily void Procesador\+::avanzar\+\_\+tiempo\+\_\+procesador (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Modificadora que avanza {\itshape t} unidades de tiempo del procesador del parametro implicito. 
+
+\begin{DoxyPrecond}{Precondición}
+t \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha añadido t unidades de tiempo al procesador del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_procesador_afcae0deb3ee1d0d4ec462f000934ac95}\label{class_procesador_afcae0deb3ee1d0d4ec462f000934ac95}} 
+\index{Procesador@{Procesador}!ocupado@{ocupado}}
+\index{ocupado@{ocupado}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{ocupado()}{ocupado()}}
+{\footnotesize\ttfamily bool Procesador\+::ocupado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que indica si un procesador tiene procesos en ejecucion. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si el procesador del parametro implicito tiene procesos en ejecucion 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_procesador_addd894616890e9957134a40d1b6c222c}\label{class_procesador_addd894616890e9957134a40d1b6c222c}} 
+\index{Procesador@{Procesador}!existe\_proceso@{existe\_proceso}}
+\index{existe\_proceso@{existe\_proceso}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{existe\_proceso()}{existe\_proceso()}}
+{\footnotesize\ttfamily bool Procesador\+::existe\+\_\+proceso (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+proceso }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de existencia de un proceso en un procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si existe un proceso identificado como {\itshape id\+\_\+proceso} en el procesador del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_procesador_a766bd694b58841c71f506a793ddea1e0}\label{class_procesador_a766bd694b58841c71f506a793ddea1e0}} 
+\index{Procesador@{Procesador}!max\_espacio\_actual@{max\_espacio\_actual}}
+\index{max\_espacio\_actual@{max\_espacio\_actual}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{max\_espacio\_actual()}{max\_espacio\_actual()}}
+{\footnotesize\ttfamily int Procesador\+::max\+\_\+espacio\+\_\+actual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del tamaño del hueco más grande en la memoria de un procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica el tamano del hueco más grande en el procesador del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_procesador_af537c88f3e0f75f244945af6472dd972}\label{class_procesador_af537c88f3e0f75f244945af6472dd972}} 
+\index{Procesador@{Procesador}!configurar\_procesador@{configurar\_procesador}}
+\index{configurar\_procesador@{configurar\_procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{configurar\_procesador()}{configurar\_procesador()}}
+{\footnotesize\ttfamily void Procesador\+::configurar\+\_\+procesador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operacion de lectura del procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+Hay en el canal de entrada el identificador del procesador y el tamano de memoria de este. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El procesador del parametro implicito pasa a tener el identificador y tamano especificado. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_procesador_a878f54f3bf0c2252046346b0b3ed069b}\label{class_procesador_a878f54f3bf0c2252046346b0b3ed069b}} 
+\index{Procesador@{Procesador}!imprimir\_procesos@{imprimir\_procesos}}
+\index{imprimir\_procesos@{imprimir\_procesos}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{imprimir\_procesos()}{imprimir\_procesos()}}
+{\footnotesize\ttfamily void Procesador\+::imprimir\+\_\+procesos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura de los procesos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe por el canal de salida el identificador del procesador, seguidos de los procesos que se estan ejecutando con sus datos por orden creciente, empezando por la primera posición de memoria. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_procesador_8hh}{Procesador.\+hh}}\end{DoxyCompactItemize}

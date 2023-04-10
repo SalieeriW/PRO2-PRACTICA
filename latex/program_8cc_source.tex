@@ -1,0 +1,152 @@
+\hypertarget{program_8cc_source}{}\doxysection{program.\+cc}
+\mbox{\hyperlink{program_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cluster_8hh}{Cluster.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_proceso_8hh}{Proceso.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_area__de___espera_8hh}{Area\_de\_Espera.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00024}\mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{00024}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_cluster}{Cluster}}\ c1;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00027}00027\ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\_cluster}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{class_area__de___espera}{Area\_de\_Espera}}\ ae;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00031}00031\ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00034}00034\ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00035}00035\ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}{alta\_prioridad}}(id\_prioridad);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{string}\ command;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00039}00039\ \ \ \ \ cin\ >>\ command;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{while}\ (command\ !=\ \textcolor{stringliteral}{"{}fin"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}cc"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\_cluster}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}mc"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cluster}{Cluster}}\ c2;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ c2.\mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\_cluster}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ c1.\mbox{\hyperlink{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}{existe\_procesador}}(id\_procesador))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ procesador\ no\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(not\ c1.\mbox{\hyperlink{class_cluster_abc0cfdec0338e90e8591c2b34ffa1fcf}{vacio}}(id\_procesador))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ procesador\ tiene\ procesadores\ auxiliares\ dependientes"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c1.\mbox{\hyperlink{class_cluster_a3eb1f063ae101ffca06b66e59dc4ac3e}{procesador\_ocupado}}(id\_procesador))}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ procesador\ tiene\ procesos\ en\ ejecucion"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ c1.\mbox{\hyperlink{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}{modificar\_cluster}}(id\_procesador,c2);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ap"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ae.\mbox{\hyperlink{class_area__de___espera_ab27220ebfbb4809e998660d965d3c15d}{existe\_prioridad}}(id\_prioridad))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ La\ prioridad\ ya\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ ae.\mbox{\hyperlink{class_area__de___espera_a75d4e81da7f44b6c4b5372dc0dfc0318}{alta\_prioridad}}(id\_prioridad);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}bp"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ ae.\mbox{\hyperlink{class_area__de___espera_ab27220ebfbb4809e998660d965d3c15d}{existe\_prioridad}}(id\_prioridad))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ La\ prioridad\ no\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ae.\mbox{\hyperlink{class_area__de___espera_a594a0e452ee08d9ccabca028e5834241}{ocupado}}(id\_prioridad))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ La\ prioridad\ tiene\ procesos\ pendientes"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ ae.\mbox{\hyperlink{class_area__de___espera_aa6fbf98c7a2d2540caba3561037fbf67}{baja\_prioridad}}(id\_prioridad);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ape"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_proceso}{Proceso}}\ job;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ job.\mbox{\hyperlink{class_proceso_ad133f53bba77755f779ef63b6e529cdb}{leer}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ ae.\mbox{\hyperlink{class_area__de___espera_ab27220ebfbb4809e998660d965d3c15d}{existe\_prioridad}}(id\_prioridad))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ La\ prioridad\ no\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ae.\mbox{\hyperlink{class_area__de___espera_a77c0695d58663eacaeb6a825ab574476}{existe\_proceso}}(id\_prioridad,\ job.\mbox{\hyperlink{class_proceso_a33b52579d6ee93986d33341bacc86521}{consultar\_id}}()))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ proceso\ ya\ existe\ en\ la\ prioridad"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ ae.\mbox{\hyperlink{class_area__de___espera_a8df87ca39287172b8f2b4ba4a4427df5}{alta\_proceso\_espera}}(id\_prioridad,\ job);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}app"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_proceso}{Proceso}}\ job;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ job.\mbox{\hyperlink{class_proceso_ad133f53bba77755f779ef63b6e529cdb}{leer}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ c1.\mbox{\hyperlink{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}{existe\_procesador}}(id\_procesador))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ procesador\ no\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(c1.\mbox{\hyperlink{class_cluster_abf3f8552a42aa4c4a1d8956acde49267}{existe\_proceso}}(id\_procesador,job.\mbox{\hyperlink{class_proceso_a33b52579d6ee93986d33341bacc86521}{consultar\_id}}()))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ proceso\ ya\ existe\ en\ el\ procesador"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c1.\mbox{\hyperlink{class_cluster_a47204059e55a4774461c23dc4d751fe7}{espacio\_procesador}}(id\_procesador)\ <\ job.\mbox{\hyperlink{class_proceso_a30a7b87bcaea734f740fe4e7c4475d30}{consultar\_tamano}}())\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ No\ hay\ suficiente\ espacio\ en\ la\ memoria"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ c1.\mbox{\hyperlink{class_cluster_a49ec4041303d756070501975822ec374}{alta\_proceso\_procesador}}(id\_procesador,\ job);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}bpp"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id\_job;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_job;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ c1.\mbox{\hyperlink{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}{existe\_procesador}}(id\_procesador))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ procesador\ no\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(not\ c1.\mbox{\hyperlink{class_cluster_abf3f8552a42aa4c4a1d8956acde49267}{existe\_proceso}}(id\_procesador,id\_job))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ proceso\ no\ existe\ en\ el\ procesador"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ c1.\mbox{\hyperlink{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}{baja\_proceso\_procesador}}(id\_procesador,\ id\_job);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}epc"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_adce13778ff8b0b5eb46701dc1b031515}{enviar\_procesos\_cluster}}(n,c1);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00123}00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}at"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}{avanzar\_tiempo}}(t);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00129}00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ipri"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_prioridad;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ ae.\mbox{\hyperlink{class_area__de___espera_ab27220ebfbb4809e998660d965d3c15d}{existe\_prioridad}}(id\_prioridad))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ La\ prioridad\ no\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ ae.\mbox{\hyperlink{class_area__de___espera_a68b1bd241e3de344d4ec48ae932e92e4}{imprimir\_prioridad}}(id\_prioridad);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00136}00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}iae"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ ae.\mbox{\hyperlink{class_area__de___espera_a2b71d440d461fe1c33d48caf54a43561}{imprimir\_area\_espera}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00139}00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ipro"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ c1.\mbox{\hyperlink{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}{existe\_procesador}}(id\_procesador))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ procesador\ no\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ c1.\mbox{\hyperlink{class_cluster_a5379829cce87db8038e42f421ebc8554}{imprimir\_procesador}}(id\_procesador);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00146}00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}ipc"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a974c440062deed4ea77a511d42f6629c}{imprimir\_procesador\_cluster}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00149}00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}iec"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a285714ee7b0d682682fbb634d2170f04}{imprimir\_estructura\_cluster}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00152}00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}cmp"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id\_procesador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ c1.\mbox{\hyperlink{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}{existe\_procesador}}(id\_procesador))\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ El\ procesador\ no\ existe"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}{compactar\_memoria\_procesador}}(id\_procesador);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00159}00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (command\ ==\ \textcolor{stringliteral}{"{}cmc"{}})\{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}{compactar\_memoria\_cluster}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00162}00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00163}00163\ \ \ \ \ \ \ \ \ cin\ >>\ command;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00164}00164\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00165}00165\ \}}
+
+\end{DoxyCode}

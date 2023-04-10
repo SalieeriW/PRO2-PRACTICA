@@ -6,101 +6,161 @@
 #define CLUSTER_HH
 
 #include "Procesador.hh"
-#include "Area_de_Espera.hh"
-
+#include "Proceso.hh"
 /** @class Cluster
- *  @brief Esta clase hace referencia a un Cluster un conjunto de procesadores (minimo 1) que
- *  realizan procesos y tareas. Dispone de un contador de tiempo y permite operar con los procesadores: asignar tareas (procesos) a partir de la area de espera o inserta de forma directa a un
- *  procesador del Cluster o bien compactar la memoria de estos.
+ *  @brief Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que
+ *  realizan procesos y tareas. Permite anadir procesadores al Cluster, compactar la memoria de
+ *  un procesador o todos los procesadores del Cluster, dar de alta a procesos (directamente a
+ *  un procesador determinado o al procesador más optimo. También permite hacer consultas sobre
+ *  l'estado de un procesador, si existe, tiene tareas en ejecución, si tiene procesadores auxiliares y
+ *  la memoria disponible. No obstante, dispone de un contador de tiempo, se puede avanzar el tiempo para
+ *  terminar los procesos en ejecución. Por último, dispone de operaciones de lectura y escriptura a nivell
+ *  de cluster y a nivell de procesador. 
 */
 class Cluster {
-
-    private:
 
     public:
 
     //Constructoras
+
     /** @brief Creadora por defecto
     * \pre <em>cierto</em>
     * \post El resultado es un Cluster vacio.
     */
     Cluster();
 
-
     //Modificadoras
 
-    /** @brief Modificadora que permite fusionar dos clusters.
-     * \pre Existe el procesador p en el parametro implicito y este no tiene procesadores auxiliaries ni tampoco procesos en ejecución.
-     * \post Se ha colocado el Cluster del parametro en el lugar de p, substituyendo este por la raiz del Cluster del parametro.
+    /** @brief Modificadora que permite añadir (fusionar) un cluster a un otro.
+     * \pre Existe el procesador p en el Cluster del parametro implicito y este procesador 
+     * no tiene procesadores auxiliaries ni tampoco procesos en ejecución.
+     * \post Se ha colocado el Cluster <em>c</em> del parametro en el lugar de <em>p</em>, substituyendo
+     * este por la raiz del Cluster del parametro.
     */
     void modificar_cluster (string id_procesador, const Cluster &c); //Requiere metodo privado
 
     /** @brief Modificadora que compacta la memoria de un procesador.
-     * \pre  Existe un procesador con el el identifacador como el parametro id_procesador en el cluster.
-     * \post Se han movido todos los procesos de la memoria del procesador al principio, sin dejar huecos ni que se solapen entre procesos.
+     * \pre  Existe un procesador con el el identificador como el parametro <em>id_procesador</em>
+     *  en el cluster.
+     * \post Se han movido todos los procesos de la memoria del procesador <em>id_procesador</em>
+     *  al principio, sin dejar huecos ni que se solapen entre procesos.
     */
     void compactar_memoria_procesador(string id_procesador);
 
     /** @brief Modificadora que compacta las memorias de todos los procesadores del cluster.
      * \pre <em>cierto</em>
-     * \post Se han movido todos los procesos de las memorias de los procesadores del cluster del parametro implici al principio, sin dejar huecos ni solapar-se.
+     * \post Se han movido todos los procesos de las memorias de los procesadores del cluster
+     *  del parametro implici al principio, sin dejar huecos ni solapar-se.
     */
     void compactar_memoria_cluster();
 
-    /** @brief Modificadora que envia n procesos (eligidos tienendo en cuenta el orden de prioridad, y los más antiguos) de una area de espera a los procesadores del cluster del parametro implicito.
-     *  Si no hay espacio, entonces el proceso es rechazado y devuelto a la area de espera original.
-     * \pre n >= 0.
-     * \post Se han enviado los n procesos de la area de espera a los procesadores del cluster del parametro implicito y se ha actualizado en la area de espera el numero de procesos acceptados y rechazados en las
-     * prioridades correspondentes.
-    */
-    void enviar_procesos_cluster(int n, Area_de_Espera &ae); // Require metodo para consultar prioridades en ae, modificaciones en el ae los numeros.
-
-    /** @brief Modificadora que envia un proceso especificado en el parametro job a un procesador identificado como id_procesador del parametro. El proceso es colocado al hueco más ajustado y ocupa la memoria que se especifica en job.
-     * \pre Existe un procesador con identificador de id_procesador que no tiene previamente un proceso nombrado igual que job (proceso del parametro).
-     * \post Se ejecuta el proceso job en el procesador id_procesador del cluster del parametro implicito.
+    /** @brief Modificadora que envia un proceso a un procesador determinado. El proceso es
+     *  colocado al hueco más ajustado.
+     * \pre Existe un procesador con identificador de <em>id_procesador</em> que no tiene previamente
+     *  un proceso nombrado igual que <em>job</em>.
+     * \post Se ejecuta el proceso <em>job</em> en el procesador <em>id_procesador</em> del
+     *  cluster del parametro implicito.
     */
     void alta_proceso_procesador(string id_procesador, const Proceso &job);
 
-    /** @brief Modificadora que elimina un proceso con identificador id_job que se esta ejecutando en un procesador identificado como id_procesador del cluster.
-     * \pre Existe un procesador con identificador de id_procesador y esta ejecutando un proceso nombrado igual que id_job.
-     * \post Se ha eliminado el proceso identificado como id_job que se estaba ejecutando en un procesador nombrado id_procesador del cluster del parametro implicito.
+    /** @brief Modificadora que elimina un proceso que se esta ejecutando en un procesador del cluster.
+     * \pre Existe un procesador con identificador <em>id_procesador</em> y esta ejecutando
+     *  un proceso nombrado igual que id_job.
+     * \post Se ha eliminado el proceso identificado como <em>id_job</em> que se estaba ejecutando 
+     *  en un procesador nombrado <em>id_procesador</em> del cluster del parametro implicito.
     */
     void baja_proceso_procesador(string id_procesador, int id_job); 
 
+    /** @brief Modificadora que envia un proceso a un procesador del cluster, se eligira el
+     *  procesador con un hueco en la memoria más ajustado al requerido, en caso de empate,
+     *  el que tenga más memoria libre. Si persiste el empate, el que se encuentra mas cerca
+     *  del procesador principal. Como ultimo criterio de empate, el procesador que está más
+     *  a la izquierda.
+     * \pre <em>cierto</em>
+     * \post El resultado indica si se ha podido colocar el proceso job en alguno de los
+     *  procesadores del cluster del parametro implicito.
+    */
+    bool alta_proceso(const Proceso &job); 
+
     /** @brief Modificadora el contador tiempo transcurrido.
      * \pre t >= 0.
-     * \post Se ha avanzado t unidades de tiempo.
+     * \post Se ha avanzado <em>t</em> unidades de tiempo.
     */  
     void avanzar_tiempo(int t); 
 
+    //Consultoras
+
+    /** @brief Consultora que indica la existencia de un procesador en el cluster.
+     * \pre <em>cierto</em>
+     * \post El resultado indica si existe un procesador con identificador <em>id_procesador</em>.
+    */  
+    bool existe_procesador(string id_procesador) const;
+
+    /** @brief Consultora que indica si un procesador tiene procesador auxiliares.
+     * \pre Existe un procesador en el cluster del parametro implicito identificado como
+     * <em>id_procesador</em>.
+     * \post El resultado indica si el procesador con identificador <em>id_procesador</em>
+     *  tiene procesadores auxiliares.
+    */  
+    bool vacio (string id_procesador) const;
+
+    /** @brief Consultora que indica si un procesador esta ocupado.
+     * \pre Existe un procesador en el cluster del parametro implicito identificado como 
+     * <em>id_procesador</em>.
+     * \post El resultado indica si el procesador con identificador <em>id_procesador</em>
+     *  tiene procesos pendientes.
+    */  
+    bool procesador_ocupado (string id_procesador) const;
+
+    /** @brief Consultora que indica la existencia de un proceso en un procesador del cluster.
+     * \pre Existe un procesador en el cluster del parametro implicito identificado como
+     * <em>id_procesador</em>.
+     * \post El resultado indica si existe un proceso identificado como <em>id_job</em> en
+     *  un procesador del cluster del parametro implicito, identificado como <em>id_procesador</em>.
+    */  
+    bool existe_proceso(string id_procesador, int id_job) const;
+
+    /** @brief Consultora del tamaño del hueco más grande en la memoria de un procesador.
+     * \pre El procesador con <em>id_procesador</em> existe en el cluster del parametro implicito.
+     * \post El resultado indica el tamano del hueco más grande en el procesador <em>id_procesador</em>
+     *  del cluster del parametro implicito.
+    */
+    int espacio_procesador (string id_procesador) const;
 
     //Lectura y Escriptura
 
     /** @brief Operacion de lectura de Cluster.
      * \pre <em>Cierto></em>
-     * \post El Cluster del parametro implicito queda inicializado con los procesadores y sus respectivas memorias.
+     * \post El Cluster del parametro implicito queda inicializado con los procesadores y 
+     * sus respectivas memorias.
     */  
     void configurar_cluster (); //requiere metodos en privado.
 
     /** @brief Operacion de escriptura del Cluster.
      * \pre <em>Cierto</em>
-     * \post Se escribe para todos los procesadores en orden creciente de identificador en el canal de salida, los procesos que se esta ejecutando en el procesador con identificador id_procesador y 
-     * su posición de memoria en orden creciente de primera posición de memoria, juntamente con los datos de cada proceso.
+     * \post Se escribe en el canal de salida, para todos los procesadores por orden creciente
+     *  de identificador, los procesos que se esta ejecutando, empezando por la primera posición
+     *  de memoria en orden creciente los datos de cada proceso.
     */  
     void imprimir_procesador_cluster() const;
 
     /** @brief Operacion de escriptura del Cluster.
      * \pre <em>Cierto></em>
-     * \post Se ha escrito la estructura los procesadores del Cluster por el canal.
+     * \post Se ha escrito la estructura los procesadores del Cluster del parametro implicito
+     *  por el canal de salida.
     */    
     void imprimir_estructura_cluster() const; //Requiere metodo privado.
 
     /** @brief Operacion de escriptura del procesador.
      * \pre <em>cierto</em>
-     * \post Se escribe por orden creciente de primera posición de memoria en el canal de salida los procesos que se esta ejecutando en el procesador con identificador id_procesador y 
-     * su posición de memoria, juntamente con los datos de cada proceso.
+     * \post Se escribe por orden creciente de primera posición de memoria en el canal de 
+     * salida los procesos que se esta ejecutando en el procesador con identificador <em>id_procesador</em>
+     * y su posición de memoria, juntamente con los datos de cada proceso.
     */
     void imprimir_procesador(string id_procesador) const;
     
+    
+    private:
+
 };
 #endif

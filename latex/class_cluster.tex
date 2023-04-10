@@ -1,0 +1,338 @@
+\hypertarget{class_cluster}{}\doxysection{Referencia de la Clase Cluster}
+\label{class_cluster}\index{Cluster@{Cluster}}
+
+
+Esta clase hace referencia a un \mbox{\hyperlink{class_cluster}{Cluster}}, un conjunto de procesadores (minimo 1) que realizan procesos y tareas. Permite anadir procesadores al \mbox{\hyperlink{class_cluster}{Cluster}}, compactar la memoria de un procesador o todos los procesadores del \mbox{\hyperlink{class_cluster}{Cluster}}, dar de alta a procesos (directamente a un procesador determinado o al procesador más optimo. También permite hacer consultas sobre l\textquotesingle{}estado de un procesador, si existe, tiene tareas en ejecución, si tiene procesadores auxiliares y la memoria disponible. No obstante, dispone de un contador de tiempo, se puede avanzar el tiempo para terminar los procesos en ejecución. Por último, dispone de operaciones de lectura y escriptura a nivell de cluster y a nivell de procesador.  
+
+
+
+
+{\ttfamily \#include $<$Cluster.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cluster_aee7feb1d599d4c8fda6c3ee83e86ba81}{Cluster}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}{modificar\+\_\+cluster}} (string id\+\_\+procesador, const \mbox{\hyperlink{class_cluster}{Cluster}} \&c)
+\begin{DoxyCompactList}\small\item\em Modificadora que permite añadir (fusionar) un cluster a un otro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}{compactar\+\_\+memoria\+\_\+procesador}} (string id\+\_\+procesador)
+\begin{DoxyCompactList}\small\item\em Modificadora que compacta la memoria de un procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}{compactar\+\_\+memoria\+\_\+cluster}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora que compacta las memorias de todos los procesadores del cluster. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a49ec4041303d756070501975822ec374}{alta\+\_\+proceso\+\_\+procesador}} (string id\+\_\+procesador, const \mbox{\hyperlink{class_proceso}{Proceso}} \&job)
+\begin{DoxyCompactList}\small\item\em Modificadora que envia un proceso a un procesador determinado. El proceso es colocado al hueco más ajustado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}{baja\+\_\+proceso\+\_\+procesador}} (string id\+\_\+procesador, int id\+\_\+job)
+\begin{DoxyCompactList}\small\item\em Modificadora que elimina un proceso que se esta ejecutando en un procesador del cluster. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cluster_acd2dbdeedce25e26896d96d80c2e8910}{alta\+\_\+proceso}} (const \mbox{\hyperlink{class_proceso}{Proceso}} \&job)
+\begin{DoxyCompactList}\small\item\em Modificadora que envia un proceso a un procesador del cluster, se eligira el procesador con un hueco en la memoria más ajustado al requerido, en caso de empate, el que tenga más memoria libre. Si persiste el empate, el que se encuentra mas cerca del procesador principal. Como ultimo criterio de empate, el procesador que está más a la izquierda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}{avanzar\+\_\+tiempo}} (int t)
+\begin{DoxyCompactList}\small\item\em Modificadora el contador tiempo transcurrido. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}{existe\+\_\+procesador}} (string id\+\_\+procesador) const
+\begin{DoxyCompactList}\small\item\em Consultora que indica la existencia de un procesador en el cluster. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cluster_abc0cfdec0338e90e8591c2b34ffa1fcf}{vacio}} (string id\+\_\+procesador) const
+\begin{DoxyCompactList}\small\item\em Consultora que indica si un procesador tiene procesador auxiliares. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cluster_a3eb1f063ae101ffca06b66e59dc4ac3e}{procesador\+\_\+ocupado}} (string id\+\_\+procesador) const
+\begin{DoxyCompactList}\small\item\em Consultora que indica si un procesador esta ocupado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cluster_abf3f8552a42aa4c4a1d8956acde49267}{existe\+\_\+proceso}} (string id\+\_\+procesador, int id\+\_\+job) const
+\begin{DoxyCompactList}\small\item\em Consultora que indica la existencia de un proceso en un procesador del cluster. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cluster_a47204059e55a4774461c23dc4d751fe7}{espacio\+\_\+procesador}} (string id\+\_\+procesador) const
+\begin{DoxyCompactList}\small\item\em Consultora del tamaño del hueco más grande en la memoria de un procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\+\_\+cluster}} ()
+\begin{DoxyCompactList}\small\item\em Operacion de lectura de \mbox{\hyperlink{class_cluster}{Cluster}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a974c440062deed4ea77a511d42f6629c}{imprimir\+\_\+procesador\+\_\+cluster}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura del \mbox{\hyperlink{class_cluster}{Cluster}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a285714ee7b0d682682fbb634d2170f04}{imprimir\+\_\+estructura\+\_\+cluster}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura del \mbox{\hyperlink{class_cluster}{Cluster}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cluster_a5379829cce87db8038e42f421ebc8554}{imprimir\+\_\+procesador}} (string id\+\_\+procesador) const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura del procesador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Esta clase hace referencia a un \mbox{\hyperlink{class_cluster}{Cluster}}, un conjunto de procesadores (minimo 1) que realizan procesos y tareas. Permite anadir procesadores al \mbox{\hyperlink{class_cluster}{Cluster}}, compactar la memoria de un procesador o todos los procesadores del \mbox{\hyperlink{class_cluster}{Cluster}}, dar de alta a procesos (directamente a un procesador determinado o al procesador más optimo. También permite hacer consultas sobre l\textquotesingle{}estado de un procesador, si existe, tiene tareas en ejecución, si tiene procesadores auxiliares y la memoria disponible. No obstante, dispone de un contador de tiempo, se puede avanzar el tiempo para terminar los procesos en ejecución. Por último, dispone de operaciones de lectura y escriptura a nivell de cluster y a nivell de procesador. 
+
+Definición en la línea \mbox{\hyperlink{_cluster_8hh_source_l00020}{20}} del archivo \mbox{\hyperlink{_cluster_8hh_source}{Cluster.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_cluster_aee7feb1d599d4c8fda6c3ee83e86ba81}\label{class_cluster_aee7feb1d599d4c8fda6c3ee83e86ba81}} 
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{Cluster()}{Cluster()}}
+{\footnotesize\ttfamily Cluster\+::\+Cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un \mbox{\hyperlink{class_cluster}{Cluster}} vacio. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}\label{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}} 
+\index{Cluster@{Cluster}!modificar\_cluster@{modificar\_cluster}}
+\index{modificar\_cluster@{modificar\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{modificar\_cluster()}{modificar\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::modificar\+\_\+cluster (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador,  }\item[{const \mbox{\hyperlink{class_cluster}{Cluster}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Modificadora que permite añadir (fusionar) un cluster a un otro. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el procesador p en el \mbox{\hyperlink{class_cluster}{Cluster}} del parametro implicito y este procesador no tiene procesadores auxiliaries ni tampoco procesos en ejecución. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha colocado el \mbox{\hyperlink{class_cluster}{Cluster}} {\itshape c} del parametro en el lugar de {\itshape p}, substituyendo este por la raiz del \mbox{\hyperlink{class_cluster}{Cluster}} del parametro. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}\label{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}} 
+\index{Cluster@{Cluster}!compactar\_memoria\_procesador@{compactar\_memoria\_procesador}}
+\index{compactar\_memoria\_procesador@{compactar\_memoria\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{compactar\_memoria\_procesador()}{compactar\_memoria\_procesador()}}
+{\footnotesize\ttfamily void Cluster\+::compactar\+\_\+memoria\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador }\end{DoxyParamCaption})}
+
+
+
+Modificadora que compacta la memoria de un procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un procesador con el el identificador como el parametro {\itshape id\+\_\+procesador} en el cluster. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han movido todos los procesos de la memoria del procesador {\itshape id\+\_\+procesador} al principio, sin dejar huecos ni que se solapen entre procesos. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}\label{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}} 
+\index{Cluster@{Cluster}!compactar\_memoria\_cluster@{compactar\_memoria\_cluster}}
+\index{compactar\_memoria\_cluster@{compactar\_memoria\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{compactar\_memoria\_cluster()}{compactar\_memoria\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::compactar\+\_\+memoria\+\_\+cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora que compacta las memorias de todos los procesadores del cluster. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han movido todos los procesos de las memorias de los procesadores del cluster del parametro implici al principio, sin dejar huecos ni solapar-\/se. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a49ec4041303d756070501975822ec374}\label{class_cluster_a49ec4041303d756070501975822ec374}} 
+\index{Cluster@{Cluster}!alta\_proceso\_procesador@{alta\_proceso\_procesador}}
+\index{alta\_proceso\_procesador@{alta\_proceso\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso\_procesador()}{alta\_proceso\_procesador()}}
+{\footnotesize\ttfamily void Cluster\+::alta\+\_\+proceso\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador,  }\item[{const \mbox{\hyperlink{class_proceso}{Proceso}} \&}]{job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que envia un proceso a un procesador determinado. El proceso es colocado al hueco más ajustado. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un procesador con identificador de {\itshape id\+\_\+procesador} que no tiene previamente un proceso nombrado igual que {\itshape job}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ejecuta el proceso {\itshape job} en el procesador {\itshape id\+\_\+procesador} del cluster del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}\label{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}} 
+\index{Cluster@{Cluster}!baja\_proceso\_procesador@{baja\_proceso\_procesador}}
+\index{baja\_proceso\_procesador@{baja\_proceso\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{baja\_proceso\_procesador()}{baja\_proceso\_procesador()}}
+{\footnotesize\ttfamily void Cluster\+::baja\+\_\+proceso\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador,  }\item[{int}]{id\+\_\+job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que elimina un proceso que se esta ejecutando en un procesador del cluster. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un procesador con identificador {\itshape id\+\_\+procesador} y esta ejecutando un proceso nombrado igual que id\+\_\+job. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha eliminado el proceso identificado como {\itshape id\+\_\+job} que se estaba ejecutando en un procesador nombrado {\itshape id\+\_\+procesador} del cluster del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_acd2dbdeedce25e26896d96d80c2e8910}\label{class_cluster_acd2dbdeedce25e26896d96d80c2e8910}} 
+\index{Cluster@{Cluster}!alta\_proceso@{alta\_proceso}}
+\index{alta\_proceso@{alta\_proceso}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso()}{alta\_proceso()}}
+{\footnotesize\ttfamily bool Cluster\+::alta\+\_\+proceso (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_proceso}{Proceso}} \&}]{job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que envia un proceso a un procesador del cluster, se eligira el procesador con un hueco en la memoria más ajustado al requerido, en caso de empate, el que tenga más memoria libre. Si persiste el empate, el que se encuentra mas cerca del procesador principal. Como ultimo criterio de empate, el procesador que está más a la izquierda. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si se ha podido colocar el proceso job en alguno de los procesadores del cluster del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}\label{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}} 
+\index{Cluster@{Cluster}!avanzar\_tiempo@{avanzar\_tiempo}}
+\index{avanzar\_tiempo@{avanzar\_tiempo}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{avanzar\_tiempo()}{avanzar\_tiempo()}}
+{\footnotesize\ttfamily void Cluster\+::avanzar\+\_\+tiempo (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Modificadora el contador tiempo transcurrido. 
+
+\begin{DoxyPrecond}{Precondición}
+t \texorpdfstring{$>$}{>}= 0. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha avanzado {\itshape t} unidades de tiempo. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}\label{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}} 
+\index{Cluster@{Cluster}!existe\_procesador@{existe\_procesador}}
+\index{existe\_procesador@{existe\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{existe\_procesador()}{existe\_procesador()}}
+{\footnotesize\ttfamily bool Cluster\+::existe\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que indica la existencia de un procesador en el cluster. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si existe un procesador con identificador {\itshape id\+\_\+procesador}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_abc0cfdec0338e90e8591c2b34ffa1fcf}\label{class_cluster_abc0cfdec0338e90e8591c2b34ffa1fcf}} 
+\index{Cluster@{Cluster}!vacio@{vacio}}
+\index{vacio@{vacio}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{vacio()}{vacio()}}
+{\footnotesize\ttfamily bool Cluster\+::vacio (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que indica si un procesador tiene procesador auxiliares. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un procesador en el cluster del parametro implicito identificado como {\itshape id\+\_\+procesador}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si el procesador con identificador {\itshape id\+\_\+procesador} tiene procesadores auxiliares. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a3eb1f063ae101ffca06b66e59dc4ac3e}\label{class_cluster_a3eb1f063ae101ffca06b66e59dc4ac3e}} 
+\index{Cluster@{Cluster}!procesador\_ocupado@{procesador\_ocupado}}
+\index{procesador\_ocupado@{procesador\_ocupado}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{procesador\_ocupado()}{procesador\_ocupado()}}
+{\footnotesize\ttfamily bool Cluster\+::procesador\+\_\+ocupado (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que indica si un procesador esta ocupado. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un procesador en el cluster del parametro implicito identificado como {\itshape id\+\_\+procesador}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si el procesador con identificador {\itshape id\+\_\+procesador} tiene procesos pendientes. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_abf3f8552a42aa4c4a1d8956acde49267}\label{class_cluster_abf3f8552a42aa4c4a1d8956acde49267}} 
+\index{Cluster@{Cluster}!existe\_proceso@{existe\_proceso}}
+\index{existe\_proceso@{existe\_proceso}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{existe\_proceso()}{existe\_proceso()}}
+{\footnotesize\ttfamily bool Cluster\+::existe\+\_\+proceso (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador,  }\item[{int}]{id\+\_\+job }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que indica la existencia de un proceso en un procesador del cluster. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un procesador en el cluster del parametro implicito identificado como {\itshape id\+\_\+procesador}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si existe un proceso identificado como {\itshape id\+\_\+job} en un procesador del cluster del parametro implicito, identificado como {\itshape id\+\_\+procesador}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a47204059e55a4774461c23dc4d751fe7}\label{class_cluster_a47204059e55a4774461c23dc4d751fe7}} 
+\index{Cluster@{Cluster}!espacio\_procesador@{espacio\_procesador}}
+\index{espacio\_procesador@{espacio\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{espacio\_procesador()}{espacio\_procesador()}}
+{\footnotesize\ttfamily int Cluster\+::espacio\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del tamaño del hueco más grande en la memoria de un procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+El procesador con {\itshape id\+\_\+procesador} existe en el cluster del parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica el tamano del hueco más grande en el procesador {\itshape id\+\_\+procesador} del cluster del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}\label{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}} 
+\index{Cluster@{Cluster}!configurar\_cluster@{configurar\_cluster}}
+\index{configurar\_cluster@{configurar\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{configurar\_cluster()}{configurar\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::configurar\+\_\+cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operacion de lectura de \mbox{\hyperlink{class_cluster}{Cluster}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto\texorpdfstring{$>$}{>}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El \mbox{\hyperlink{class_cluster}{Cluster}} del parametro implicito queda inicializado con los procesadores y sus respectivas memorias. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a974c440062deed4ea77a511d42f6629c}\label{class_cluster_a974c440062deed4ea77a511d42f6629c}} 
+\index{Cluster@{Cluster}!imprimir\_procesador\_cluster@{imprimir\_procesador\_cluster}}
+\index{imprimir\_procesador\_cluster@{imprimir\_procesador\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{imprimir\_procesador\_cluster()}{imprimir\_procesador\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::imprimir\+\_\+procesador\+\_\+cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura del \mbox{\hyperlink{class_cluster}{Cluster}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe en el canal de salida, para todos los procesadores por orden creciente de identificador, los procesos que se esta ejecutando, empezando por la primera posición de memoria en orden creciente los datos de cada proceso. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a285714ee7b0d682682fbb634d2170f04}\label{class_cluster_a285714ee7b0d682682fbb634d2170f04}} 
+\index{Cluster@{Cluster}!imprimir\_estructura\_cluster@{imprimir\_estructura\_cluster}}
+\index{imprimir\_estructura\_cluster@{imprimir\_estructura\_cluster}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{imprimir\_estructura\_cluster()}{imprimir\_estructura\_cluster()}}
+{\footnotesize\ttfamily void Cluster\+::imprimir\+\_\+estructura\+\_\+cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura del \mbox{\hyperlink{class_cluster}{Cluster}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto\texorpdfstring{$>$}{>}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito la estructura los procesadores del \mbox{\hyperlink{class_cluster}{Cluster}} del parametro implicito por el canal de salida. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a5379829cce87db8038e42f421ebc8554}\label{class_cluster_a5379829cce87db8038e42f421ebc8554}} 
+\index{Cluster@{Cluster}!imprimir\_procesador@{imprimir\_procesador}}
+\index{imprimir\_procesador@{imprimir\_procesador}!Cluster@{Cluster}}
+\doxysubsubsection{\texorpdfstring{imprimir\_procesador()}{imprimir\_procesador()}}
+{\footnotesize\ttfamily void Cluster\+::imprimir\+\_\+procesador (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+procesador }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura del procesador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe por orden creciente de primera posición de memoria en el canal de salida los procesos que se esta ejecutando en el procesador con identificador {\itshape id\+\_\+procesador} y su posición de memoria, juntamente con los datos de cada proceso. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cluster_8hh}{Cluster.\+hh}}\end{DoxyCompactItemize}

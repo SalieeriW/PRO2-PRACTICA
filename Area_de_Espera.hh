@@ -5,13 +5,17 @@
 #ifndef AREA_DE_ESPERA_HH
 #define AREA_DE_ESPERA_HH
 
+#include "Cluster.hh"
 #include "Prioridad.hh"
+#include "Proceso.hh"    
 
 /** @class Area_de_Espera
  *  @brief Hace referencia a la area de espera de los procesos.
  *  Contiene procesos que se quieren tratar en el cluster classificados por prioridad.
- *  Puede usarse para crear o destruir una prioridad e insertar un nuevo proceso a la espera.
- * 
+ *  Puede usarse para crear o destruir una prioridad, poner un proceso en espera, dar de
+ *  alta a procesos al cluster, consultar la existencia de prioridades y procesos, consultar
+ *  si una prioridad tiene tareas pendientes y dispone de operaciones d'escriptura para una
+ *  o todas las prioridades.
 */
 class Area_de_Espera {
 
@@ -19,7 +23,7 @@ class Area_de_Espera {
 
     // Constructoras
 
-    /** @brief Creadora por defecto
+    /** @brief Creadora por defecto.
      * Se ejecuta automáticamente al declarar una nueva area de espera.
      * \pre <em>cierto</em>
      * \post El resultado es una area de espera sin ningúna prioridad ni proceso.
@@ -28,58 +32,83 @@ class Area_de_Espera {
 
     // Modificadoras
 
-    /** @brief Modificadora que anade una nueva prioridad a la area de espera del parametro implicito.
+    /** @brief Modificadora que anade una nueva prioridad a una area de espera.
      * \pre <em>cierto</em>
-     * \post Se ha añadido una nueva prioridad identificado como id_prior a la area de espera del parametro implicito.
+     * \post Se ha añadido una nueva prioridad identificado como <em>id_prioridad</em> a la 
+     * area de espera del parametro implicito.
     */
-    void alta_prioridad (string id_prioridad);
+    void alta_prioridad(string id_prioridad);
 
-    /** @brief Modificadora que elimina una prioridad en la area de espera del parametro implicito.
-     * \pre Existe una prioridad identificada como el parametro id_prioridad en la area de espera del parametro implicito. En caso que exista,
-     * no puede tener procesos pendientes en ella.
-     * \post Se ha eliminado la prioridad identificada como id_prior a la area de espera del parametro implicito.
+    /** @brief Modificadora que elimina una prioridad en una area de espera.
+     * \pre Existe una prioridad identificada como el parametro <em>id_prioridad</em> en 
+     * la area de espera del parametro implicito. En caso que exista, no puede tener procesos 
+     * pendientes en ella.
+     * \post Se ha eliminado la prioridad identificada como <em>id_prioridad</em> a la area de
+     *  espera del parametro implicito.
     */
-    void baja_prioridad (string id_prioridad);
+    void baja_prioridad(string id_prioridad);
 
-    /** @brief Modificadora que anade un proceso a una prioridad de la area de espera del parametro implicito.
-     * \pre Existe una prioridad con el identificador del parametro id_prioridad. No existe previamente un proceso
-     *  con el mismo identificador en dicha prioridad.
-     * \post Se ha anadido un proceso a una prioridad identificado como id_prioridad que pertenece a la area de espera del parametro implicito.
+    /** @brief Modificadora que anade un proceso a una prioridad de la area de espera.
+     * \pre Existe una prioridad con el identificador del parametro <em>id_prioridad</em>.
+     *  No existe previamente un proceso con el mismo identificador en dicha prioridad.
+     * \post Se ha anadido un proceso a una prioridad identificado como <em>id_prioridad</em>
+     *  que pertenece a la area de espera del parametro implicito.
     */
     void alta_proceso_espera(string id_prioridad, const Proceso &job);
 
-    /** @brief Modificadora que modifica la prioridad iessima de la area de espera del parametro implicito.
-     * \pre Existe un numero i de prioridades en la area de espera del parametro implicito.
-     * \post Se ha substituido la iesima prioridad inicial de la area de espera del parametro implicito por la prioridad del parametro.
+    /** @brief Modificadora que envia n procesos (eligidos tienendo en cuenta el orden de 
+     * prioridad. En una prioridad, los más antiguos) de una area de espera a un cluster.
+     * Si no hay espacio, entonces el proceso es rechazado y devuelto a la area de espera original.
+     * \pre n >= 0.
+     * \post Se han enviado los n procesos de la area de espera del parametro implicito a 
+     * los procesadores del cluster del parametro <em>c</em> y se ha actualizado en la area
+     *  de espera el numero de procesos acceptados y rechazados en las prioridades correspondentes.
     */
-    void modificar_iessimo(int i, const Prioridad &prioridad);
+    void enviar_procesos_cluster(int n, Cluster &c); 
 
     // Consultoras
-    
-    /** @brief Consultora de la iesima prioridad.
-     * \pre Existe un numero i de prioridades en la area de espera del parametro implicito.
-     * \post El resultado es la prioridad iesima de la area de espera del parametro implicito.
+
+    /** @brief Consultora de existencia de una prioridad.
+     * \pre <em>cierto</em>
+     * \post El resultado indica si existe una prioridad de id_prioridad en la area de espera
+     *  del parametro implicito.
     */
-    Prioridad consultar_iessimo(int i) const;
+    bool existe_prioridad(string id_prioridad) const;
+
+     /** @brief Consultora que indica si una prioridad tiene procesos en espera.
+     * \pre Existe una prioridad identificado como <em>id_prioridad</em> en la area de espera
+     *  del parametro implicito.
+     * \post El resultado indica si la prioridad <em>id_prioridad</em> tiene procesos pendientes.
+    */
+    bool ocupado(string id_prioridad) const;
+
+     /** @brief Consultora que indica si una prioridad tiene un proceso en concreto en espera.
+     * \pre Existe una prioridad identificado como <em>id_prioridad</em>en la area de espera
+     *  del parametro implicito.
+     * \post El resultado indica si la prioridad <em>id_prioridad</em> de la area de espera
+     *  del parametro implicito tiene un proceso identificado como <em>id_proceso</em> en espera.
+    */
+    bool existe_proceso(string id_prioridad, int id_proceso) const;
 
     //Lectura y Escriptura
     
     /** @brief Operacion de escriptura de una prioridad.
-     * \pre Existe una prioridad identificada como id_prioridad en la area de esoera del parametro implicito.
-     * \post Se han escrito los procesos pendientes de dicha prioridad por orden decreciente de antiguedad desde su ultima alta y 
-     * el numero de procesos enviados al cluster, juntamente con el numero de procesos rechazado por el cluster.
+     * \pre Existe una prioridad identificada como <em>id_prioridad</em> en la area de espera
+     *  del parametro implicito.
+     * \post Se han escrito los procesos pendientes de dicha prioridad por orden decreciente
+     *  de antiguedad desde su ultima alta y el numero de procesos enviados al cluster, juntamente
+     *  con el numero de procesos rechazado por el cluster.
     */
     void imprimir_prioridad(string id_prioridad) const;
 
     /** @brief Operacion de escriptura de la area de espera.
      * \pre <em>cierto</em>
-     * \post Se han escrito los procesos pendientes de todas las prioridad de la area de espera del parametro implicito por orden
-     *  decreciente de antiguedad desde su ultima alta y el numero de procesos enviados al cluster de cada prioridad, juntamente con
-     *  el numero de procesos rechazado por el cluster.
-     * 
+     * \post Se han escrito los procesos pendientes de todas las prioridad de la area de espera
+     *  del parametro implicito por orden decreciente de antiguedad desde su ultima alta y 
+     *  el numero de procesos enviados al cluster de cada prioridad, juntamente con el numero
+     *  de procesos rechazado por el cluster.
     */
     void imprimir_area_espera() const;
-
 
 
     private:

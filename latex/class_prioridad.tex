@@ -1,0 +1,212 @@
+\hypertarget{class_prioridad}{}\doxysection{Referencia de la Clase Prioridad}
+\label{class_prioridad}\index{Prioridad@{Prioridad}}
+
+
+Esta clase hace referencia a una prioridad, un contenedor de procesos con una etiqueta formado por un string. Dispone de un conjunto de operaciones que permite anadir y eliminar procesos de una prioridad. Permite consultar el proceso mas antiguo, el numero de procesos acceptados y rechazados, el numero de procesos pendientes, si existe un proceso concreto. Por ultimo dispone de una operacion de escriptura que imprime todos los procesos de una prioridad.  
+
+
+
+
+{\ttfamily \#include $<$Prioridad.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_prioridad_af316e6df55fb8a48dcbbd4e12033d82b}{Prioridad}} (string id\+\_\+prioridad)
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prioridad_a799c3520ee2df112a9d047e8a93a8193}{alta\+\_\+proceso\+\_\+prioridad}} (const \mbox{\hyperlink{class_proceso}{Proceso}} \&job)
+\begin{DoxyCompactList}\small\item\em Modificadora que anade un proceso a la prioridad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prioridad_affb0f3a8050e58756dde93e20370c948}{modificar\+\_\+acceptados\+\_\+rechazados}} (int aceptados, int rechazados)
+\begin{DoxyCompactList}\small\item\em Modificadora que actualiza los procesos aceptados y rechazados en una prioridad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prioridad_a3e917fc458d569b5ff7cb37c35647ee4}{baja\+\_\+mas\+\_\+antiguo}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora que elimina el proceso mas antiguo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proceso}{Proceso}} \mbox{\hyperlink{class_prioridad_a03aab4462437aded91b4dff4ae7307ad}{consulta\+\_\+mas\+\_\+antiguo}} ()
+\begin{DoxyCompactList}\small\item\em Consultora del proceso mas antiguo de una prioridad. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_prioridad_aa1a6f03689cd6b38d80463370f7acd9f}{consultar\+\_\+aceptados}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de procesos aceptados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_prioridad_a8bac435ff19b239222340eca621c7e59}{consultar\+\_\+rechazados}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de procesos rechazados de una prioridad. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_prioridad_ae024dfd398d37a48708ac326079de293}{tamano}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del numero de procesos de una prioridad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_prioridad_a5dcf19af59ccb2b062e37e06aaa37150}{existe\+\_\+proceso}} (string id\+\_\+proceso) const
+\begin{DoxyCompactList}\small\item\em Consultora de existencia de un proceso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prioridad_a84fa1642679a22b4338d7612f47777b4}{imprimir\+\_\+procesos}} () const
+\begin{DoxyCompactList}\small\item\em Operacion de escriptura de una prioridad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Esta clase hace referencia a una prioridad, un contenedor de procesos con una etiqueta formado por un string. Dispone de un conjunto de operaciones que permite anadir y eliminar procesos de una prioridad. Permite consultar el proceso mas antiguo, el numero de procesos acceptados y rechazados, el numero de procesos pendientes, si existe un proceso concreto. Por ultimo dispone de una operacion de escriptura que imprime todos los procesos de una prioridad. 
+
+Definición en la línea \mbox{\hyperlink{_prioridad_8hh_source_l00018}{18}} del archivo \mbox{\hyperlink{_prioridad_8hh_source}{Prioridad.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_prioridad_af316e6df55fb8a48dcbbd4e12033d82b}\label{class_prioridad_af316e6df55fb8a48dcbbd4e12033d82b}} 
+\index{Prioridad@{Prioridad}!Prioridad@{Prioridad}}
+\index{Prioridad@{Prioridad}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{Prioridad()}{Prioridad()}}
+{\footnotesize\ttfamily Prioridad\+::\+Prioridad (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+prioridad }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una prioridad identificado como el parametro {\itshape id\+\_\+prioridad} sin procesos. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_prioridad_a799c3520ee2df112a9d047e8a93a8193}\label{class_prioridad_a799c3520ee2df112a9d047e8a93a8193}} 
+\index{Prioridad@{Prioridad}!alta\_proceso\_prioridad@{alta\_proceso\_prioridad}}
+\index{alta\_proceso\_prioridad@{alta\_proceso\_prioridad}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso\_prioridad()}{alta\_proceso\_prioridad()}}
+{\footnotesize\ttfamily void Prioridad\+::alta\+\_\+proceso\+\_\+prioridad (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_proceso}{Proceso}} \&}]{job }\end{DoxyParamCaption})}
+
+
+
+Modificadora que anade un proceso a la prioridad. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la prioridad original con un proceso nuevo {\itshape job}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_prioridad_affb0f3a8050e58756dde93e20370c948}\label{class_prioridad_affb0f3a8050e58756dde93e20370c948}} 
+\index{Prioridad@{Prioridad}!modificar\_acceptados\_rechazados@{modificar\_acceptados\_rechazados}}
+\index{modificar\_acceptados\_rechazados@{modificar\_acceptados\_rechazados}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{modificar\_acceptados\_rechazados()}{modificar\_acceptados\_rechazados()}}
+{\footnotesize\ttfamily void Prioridad\+::modificar\+\_\+acceptados\+\_\+rechazados (\begin{DoxyParamCaption}\item[{int}]{aceptados,  }\item[{int}]{rechazados }\end{DoxyParamCaption})}
+
+
+
+Modificadora que actualiza los procesos aceptados y rechazados en una prioridad. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape aceptados} \texorpdfstring{$>$}{>}= 0, {\itshape rechazados} \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha actualizado la cantidad de procesos aceptados y la cantidad de procesos rechazados. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_prioridad_a3e917fc458d569b5ff7cb37c35647ee4}\label{class_prioridad_a3e917fc458d569b5ff7cb37c35647ee4}} 
+\index{Prioridad@{Prioridad}!baja\_mas\_antiguo@{baja\_mas\_antiguo}}
+\index{baja\_mas\_antiguo@{baja\_mas\_antiguo}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{baja\_mas\_antiguo()}{baja\_mas\_antiguo()}}
+{\footnotesize\ttfamily void Prioridad\+::baja\+\_\+mas\+\_\+antiguo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora que elimina el proceso mas antiguo. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe al menos un proceso en la prioridad del parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha eliminado el proceso más antiguo de la prioridad parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_prioridad_a03aab4462437aded91b4dff4ae7307ad}\label{class_prioridad_a03aab4462437aded91b4dff4ae7307ad}} 
+\index{Prioridad@{Prioridad}!consulta\_mas\_antiguo@{consulta\_mas\_antiguo}}
+\index{consulta\_mas\_antiguo@{consulta\_mas\_antiguo}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{consulta\_mas\_antiguo()}{consulta\_mas\_antiguo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proceso}{Proceso}} Prioridad\+::consulta\+\_\+mas\+\_\+antiguo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora del proceso mas antiguo de una prioridad. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe al menos un proceso en la prioridad del parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el proceso más antiguo de la prioridad del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_prioridad_aa1a6f03689cd6b38d80463370f7acd9f}\label{class_prioridad_aa1a6f03689cd6b38d80463370f7acd9f}} 
+\index{Prioridad@{Prioridad}!consultar\_aceptados@{consultar\_aceptados}}
+\index{consultar\_aceptados@{consultar\_aceptados}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{consultar\_aceptados()}{consultar\_aceptados()}}
+{\footnotesize\ttfamily int Prioridad\+::consultar\+\_\+aceptados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de procesos aceptados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la cantidad de procesos aceptados de la prioridad del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_prioridad_a8bac435ff19b239222340eca621c7e59}\label{class_prioridad_a8bac435ff19b239222340eca621c7e59}} 
+\index{Prioridad@{Prioridad}!consultar\_rechazados@{consultar\_rechazados}}
+\index{consultar\_rechazados@{consultar\_rechazados}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{consultar\_rechazados()}{consultar\_rechazados()}}
+{\footnotesize\ttfamily int Prioridad\+::consultar\+\_\+rechazados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de procesos rechazados de una prioridad. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la cantidad de procesos rechazados de la prioridad del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_prioridad_ae024dfd398d37a48708ac326079de293}\label{class_prioridad_ae024dfd398d37a48708ac326079de293}} 
+\index{Prioridad@{Prioridad}!tamano@{tamano}}
+\index{tamano@{tamano}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{tamano()}{tamano()}}
+{\footnotesize\ttfamily int Prioridad\+::tamano (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del numero de procesos de una prioridad. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la cantidad de procesos en espera en la prioridad del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_prioridad_a5dcf19af59ccb2b062e37e06aaa37150}\label{class_prioridad_a5dcf19af59ccb2b062e37e06aaa37150}} 
+\index{Prioridad@{Prioridad}!existe\_proceso@{existe\_proceso}}
+\index{existe\_proceso@{existe\_proceso}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{existe\_proceso()}{existe\_proceso()}}
+{\footnotesize\ttfamily bool Prioridad\+::existe\+\_\+proceso (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+proceso }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de existencia de un proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si existe un proceso con identificador {\itshape id\+\_\+proceso} en la prioridad del parametro implicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_prioridad_a84fa1642679a22b4338d7612f47777b4}\label{class_prioridad_a84fa1642679a22b4338d7612f47777b4}} 
+\index{Prioridad@{Prioridad}!imprimir\_procesos@{imprimir\_procesos}}
+\index{imprimir\_procesos@{imprimir\_procesos}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{imprimir\_procesos()}{imprimir\_procesos()}}
+{\footnotesize\ttfamily void Prioridad\+::imprimir\+\_\+procesos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operacion de escriptura de una prioridad. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe por el canal de salida los procesos de la prioridad del parametro implicito por orden decreciente de antiguedad y el numero de procesos aceptados y rechazados de esta misma prioridad. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_prioridad_8hh}{Prioridad.\+hh}}\end{DoxyCompactItemize}

@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica de laboratorio de PRO2: Simulación del rendimiento: Referencia de la Clase Cluster</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Práctica de laboratorio de PRO2: Simulación del rendimiento<span id="projectnumber">&#160;Primavera 2023</span>
+   </div>
+   <div id="projectbrief">Documentación de los módulos y métodos empleados.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="class_cluster-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la Clase Cluster</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Esta clase hace referencia a un <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>, un conjunto de procesadores (minimo 1) que realizan procesos y tareas. Permite anadir procesadores al <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>, compactar la memoria de un procesador o todos los procesadores del <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>, dar de alta a procesos (directamente a un procesador determinado o al procesador más optimo. También permite hacer consultas sobre l'estado de un procesador, si existe, tiene tareas en ejecución, si tiene procesadores auxiliares y la memoria disponible. No obstante, dispone de un contador de tiempo, se puede avanzar el tiempo para terminar los procesos en ejecución. Por último, dispone de operaciones de lectura y escriptura a nivell de cluster y a nivell de procesador.  
+ <a href="class_cluster.html#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_cluster_8hh_source.html">Cluster.hh</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:aee7feb1d599d4c8fda6c3ee83e86ba81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#aee7feb1d599d4c8fda6c3ee83e86ba81">Cluster</a> ()</td></tr>
+<tr class="memdesc:aee7feb1d599d4c8fda6c3ee83e86ba81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora por defecto.  <br /></td></tr>
+<tr class="separator:aee7feb1d599d4c8fda6c3ee83e86ba81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf06f2554ac115c239a05ebc8858a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a1cf06f2554ac115c239a05ebc8858a6f">modificar_cluster</a> (string id_procesador, const <a class="el" href="class_cluster.html">Cluster</a> &amp;c)</td></tr>
+<tr class="memdesc:a1cf06f2554ac115c239a05ebc8858a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora que permite añadir (fusionar) un cluster a un otro.  <br /></td></tr>
+<tr class="separator:a1cf06f2554ac115c239a05ebc8858a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a776db08fb7d4542d0f073c6f94251d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a4a776db08fb7d4542d0f073c6f94251d">compactar_memoria_procesador</a> (string id_procesador)</td></tr>
+<tr class="memdesc:a4a776db08fb7d4542d0f073c6f94251d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora que compacta la memoria de un procesador.  <br /></td></tr>
+<tr class="separator:a4a776db08fb7d4542d0f073c6f94251d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9ae511df4a6465f4e191df6564fd77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a7b9ae511df4a6465f4e191df6564fd77">compactar_memoria_cluster</a> ()</td></tr>
+<tr class="memdesc:a7b9ae511df4a6465f4e191df6564fd77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora que compacta las memorias de todos los procesadores del cluster.  <br /></td></tr>
+<tr class="separator:a7b9ae511df4a6465f4e191df6564fd77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ec4041303d756070501975822ec374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a49ec4041303d756070501975822ec374">alta_proceso_procesador</a> (string id_procesador, const <a class="el" href="class_proceso.html">Proceso</a> &amp;job)</td></tr>
+<tr class="memdesc:a49ec4041303d756070501975822ec374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora que envia un proceso a un procesador determinado. El proceso es colocado al hueco más ajustado.  <br /></td></tr>
+<tr class="separator:a49ec4041303d756070501975822ec374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff597d8b68ecc0e6cec0f716b30107c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a3ff597d8b68ecc0e6cec0f716b30107c">baja_proceso_procesador</a> (string id_procesador, int id_job)</td></tr>
+<tr class="memdesc:a3ff597d8b68ecc0e6cec0f716b30107c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora que elimina un proceso que se esta ejecutando en un procesador del cluster.  <br /></td></tr>
+<tr class="separator:a3ff597d8b68ecc0e6cec0f716b30107c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2dbdeedce25e26896d96d80c2e8910"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#acd2dbdeedce25e26896d96d80c2e8910">alta_proceso</a> (const <a class="el" href="class_proceso.html">Proceso</a> &amp;job)</td></tr>
+<tr class="memdesc:acd2dbdeedce25e26896d96d80c2e8910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora que envia un proceso a un procesador del cluster, se eligira el procesador con un hueco en la memoria más ajustado al requerido, en caso de empate, el que tenga más memoria libre. Si persiste el empate, el que se encuentra mas cerca del procesador principal. Como ultimo criterio de empate, el procesador que está más a la izquierda.  <br /></td></tr>
+<tr class="separator:acd2dbdeedce25e26896d96d80c2e8910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b93301a46cfa8cadf8d0121e234c386"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a3b93301a46cfa8cadf8d0121e234c386">avanzar_tiempo</a> (int t)</td></tr>
+<tr class="memdesc:a3b93301a46cfa8cadf8d0121e234c386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora el contador tiempo transcurrido.  <br /></td></tr>
+<tr class="separator:a3b93301a46cfa8cadf8d0121e234c386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f9daea57e2773ab5766ef82d2a1def"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a84f9daea57e2773ab5766ef82d2a1def">configurar_cluster</a> ()</td></tr>
+<tr class="memdesc:a84f9daea57e2773ab5766ef82d2a1def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operacion de lectura de <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>.  <br /></td></tr>
+<tr class="separator:a84f9daea57e2773ab5766ef82d2a1def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a974c440062deed4ea77a511d42f6629c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a974c440062deed4ea77a511d42f6629c">imprimir_procesador_cluster</a> () const</td></tr>
+<tr class="memdesc:a974c440062deed4ea77a511d42f6629c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operacion de escriptura del <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>.  <br /></td></tr>
+<tr class="separator:a974c440062deed4ea77a511d42f6629c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285714ee7b0d682682fbb634d2170f04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a285714ee7b0d682682fbb634d2170f04">imprimir_estructura_cluster</a> () const</td></tr>
+<tr class="memdesc:a285714ee7b0d682682fbb634d2170f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operacion de escriptura del <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>.  <br /></td></tr>
+<tr class="separator:a285714ee7b0d682682fbb634d2170f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5379829cce87db8038e42f421ebc8554"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cluster.html#a5379829cce87db8038e42f421ebc8554">imprimir_procesador</a> (string id_procesador) const</td></tr>
+<tr class="memdesc:a5379829cce87db8038e42f421ebc8554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operacion de escriptura del procesador.  <br /></td></tr>
+<tr class="separator:a5379829cce87db8038e42f421ebc8554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Esta clase hace referencia a un <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>, un conjunto de procesadores (minimo 1) que realizan procesos y tareas. Permite anadir procesadores al <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>, compactar la memoria de un procesador o todos los procesadores del <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>, dar de alta a procesos (directamente a un procesador determinado o al procesador más optimo. También permite hacer consultas sobre l'estado de un procesador, si existe, tiene tareas en ejecución, si tiene procesadores auxiliares y la memoria disponible. No obstante, dispone de un contador de tiempo, se puede avanzar el tiempo para terminar los procesos en ejecución. Por último, dispone de operaciones de lectura y escriptura a nivell de cluster y a nivell de procesador. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_cluster_8hh_source.html#l00020">20</a> del archivo <a class="el" href="_cluster_8hh_source.html">Cluster.hh</a>.</p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a id="aee7feb1d599d4c8fda6c3ee83e86ba81" name="aee7feb1d599d4c8fda6c3ee83e86ba81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7feb1d599d4c8fda6c3ee83e86ba81">&#9670;&#160;</a></span>Cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cluster::Cluster </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creadora por defecto. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>El resultado es un <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a> vacio. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a id="a1cf06f2554ac115c239a05ebc8858a6f" name="a1cf06f2554ac115c239a05ebc8858a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf06f2554ac115c239a05ebc8858a6f">&#9670;&#160;</a></span>modificar_cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::modificar_cluster </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id_procesador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_cluster.html">Cluster</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modificadora que permite añadir (fusionar) un cluster a un otro. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Existe el procesador p en el <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a> del parametro implicito y este procesador no tiene procesadores auxiliaries ni tampoco procesos en ejecución. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha colocado el <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a> <em>c</em> del parametro en el lugar de <em>p</em>, substituyendo este por la raiz del <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a> del parametro. </dd></dl>
+
+</div>
+</div>
+<a id="a4a776db08fb7d4542d0f073c6f94251d" name="a4a776db08fb7d4542d0f073c6f94251d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a776db08fb7d4542d0f073c6f94251d">&#9670;&#160;</a></span>compactar_memoria_procesador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::compactar_memoria_procesador </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id_procesador</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modificadora que compacta la memoria de un procesador. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Existe un procesador con el el identificador como el parametro <em>id_procesador</em> en el cluster. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se han movido todos los procesos de la memoria del procesador <em>id_procesador</em> al principio, sin dejar huecos ni que se solapen entre procesos. </dd></dl>
+
+</div>
+</div>
+<a id="a7b9ae511df4a6465f4e191df6564fd77" name="a7b9ae511df4a6465f4e191df6564fd77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9ae511df4a6465f4e191df6564fd77">&#9670;&#160;</a></span>compactar_memoria_cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::compactar_memoria_cluster </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modificadora que compacta las memorias de todos los procesadores del cluster. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se han movido todos los procesos de las memorias de los procesadores del cluster del parametro implici al principio, sin dejar huecos ni solapar-se. </dd></dl>
+
+</div>
+</div>
+<a id="a49ec4041303d756070501975822ec374" name="a49ec4041303d756070501975822ec374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ec4041303d756070501975822ec374">&#9670;&#160;</a></span>alta_proceso_procesador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::alta_proceso_procesador </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id_procesador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_proceso.html">Proceso</a> &amp;&#160;</td>
+          <td class="paramname"><em>job</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modificadora que envia un proceso a un procesador determinado. El proceso es colocado al hueco más ajustado. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Existe un procesador con identificador de <em>id_procesador</em> que no tiene previamente un proceso nombrado igual que <em>job</em>. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ejecuta el proceso <em>job</em> en el procesador <em>id_procesador</em> del cluster del parametro implicito. </dd></dl>
+
+</div>
+</div>
+<a id="a3ff597d8b68ecc0e6cec0f716b30107c" name="a3ff597d8b68ecc0e6cec0f716b30107c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff597d8b68ecc0e6cec0f716b30107c">&#9670;&#160;</a></span>baja_proceso_procesador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::baja_proceso_procesador </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id_procesador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_job</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modificadora que elimina un proceso que se esta ejecutando en un procesador del cluster. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Existe un procesador con identificador <em>id_procesador</em> y esta ejecutando un proceso nombrado igual que id_job. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha eliminado el proceso identificado como <em>id_job</em> que se estaba ejecutando en un procesador nombrado <em>id_procesador</em> del cluster del parametro implicito. </dd></dl>
+
+</div>
+</div>
+<a id="acd2dbdeedce25e26896d96d80c2e8910" name="acd2dbdeedce25e26896d96d80c2e8910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2dbdeedce25e26896d96d80c2e8910">&#9670;&#160;</a></span>alta_proceso()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Cluster::alta_proceso </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_proceso.html">Proceso</a> &amp;&#160;</td>
+          <td class="paramname"><em>job</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modificadora que envia un proceso a un procesador del cluster, se eligira el procesador con un hueco en la memoria más ajustado al requerido, en caso de empate, el que tenga más memoria libre. Si persiste el empate, el que se encuentra mas cerca del procesador principal. Como ultimo criterio de empate, el procesador que está más a la izquierda. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>El resultado indica si se ha podido colocar el proceso job en alguno de los procesadores del cluster del parametro implicito. </dd></dl>
+
+</div>
+</div>
+<a id="a3b93301a46cfa8cadf8d0121e234c386" name="a3b93301a46cfa8cadf8d0121e234c386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b93301a46cfa8cadf8d0121e234c386">&#9670;&#160;</a></span>avanzar_tiempo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::avanzar_tiempo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modificadora el contador tiempo transcurrido. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>t &gt;= 0. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha avanzado <em>t</em> unidades de tiempo. </dd></dl>
+
+</div>
+</div>
+<a id="a84f9daea57e2773ab5766ef82d2a1def" name="a84f9daea57e2773ab5766ef82d2a1def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f9daea57e2773ab5766ef82d2a1def">&#9670;&#160;</a></span>configurar_cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::configurar_cluster </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operacion de lectura de <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>Cierto&gt;</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>El <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a> del parametro implicito queda inicializado con los procesadores y sus respectivas memorias. </dd></dl>
+
+</div>
+</div>
+<a id="a974c440062deed4ea77a511d42f6629c" name="a974c440062deed4ea77a511d42f6629c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a974c440062deed4ea77a511d42f6629c">&#9670;&#160;</a></span>imprimir_procesador_cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::imprimir_procesador_cluster </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operacion de escriptura del <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>Cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se escribe en el canal de salida, para todos los procesadores por orden creciente de identificador, los procesos que se esta ejecutando, empezando por la primera posición de memoria en orden creciente los datos de cada proceso. </dd></dl>
+
+</div>
+</div>
+<a id="a285714ee7b0d682682fbb634d2170f04" name="a285714ee7b0d682682fbb634d2170f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285714ee7b0d682682fbb634d2170f04">&#9670;&#160;</a></span>imprimir_estructura_cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::imprimir_estructura_cluster </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operacion de escriptura del <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a>. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>Cierto&gt;</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha escrito la estructura los procesadores del <a class="el" href="class_cluster.html" title="Esta clase hace referencia a un Cluster, un conjunto de procesadores (minimo 1) que realizan procesos...">Cluster</a> del parametro implicito por el canal de salida. </dd></dl>
+
+</div>
+</div>
+<a id="a5379829cce87db8038e42f421ebc8554" name="a5379829cce87db8038e42f421ebc8554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5379829cce87db8038e42f421ebc8554">&#9670;&#160;</a></span>imprimir_procesador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cluster::imprimir_procesador </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id_procesador</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operacion de escriptura del procesador. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se escribe por orden creciente de primera posición de memoria en el canal de salida los procesos que se esta ejecutando en el procesador con identificador <em>id_procesador</em> y su posición de memoria, juntamente con los datos de cada proceso. </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li><a class="el" href="_cluster_8hh_source.html">Cluster.hh</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

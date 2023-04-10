@@ -1,0 +1,7 @@
+<map id="Area_de_Espera.hh" name="Area_de_Espera.hh">
+<area shape="rect" id="node1" title="Especificación de la clase Area de Espera." alt="" coords="132,5,268,31"/>
+<area shape="rect" id="node2" href="$_cluster_8hh.html" title="Especificación de la clase Cluster." alt="" coords="81,79,162,104"/>
+<area shape="rect" id="node4" href="$_proceso_8hh.html" title="Especificación de la clase Proceso." alt="" coords="131,225,219,251"/>
+<area shape="rect" id="node5" href="$_prioridad_8hh.html" title="Especificación de la clase Prioridad." alt="" coords="237,152,328,177"/>
+<area shape="rect" id="node3" href="$_procesador_8hh.html" title="Especificación de la clase Procesador." alt="" coords="5,152,112,177"/>
+</map>

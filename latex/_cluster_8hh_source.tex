@@ -1,0 +1,62 @@
+\hypertarget{_cluster_8hh_source}{}\doxysection{Cluster.\+hh}
+\mbox{\hyperlink{_cluster_8hh}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ CLUSTER\_HH}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00006}00006\ \textcolor{preprocessor}{\#define\ CLUSTER\_HH}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_procesador_8hh}{Procesador.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_proceso_8hh}{Proceso.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00020}\mbox{\hyperlink{class_cluster}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cluster}{Cluster}}\ \{}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//Constructoras}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00030}\mbox{\hyperlink{class_cluster_aee7feb1d599d4c8fda6c3ee83e86ba81}{00030}}\ \ \ \ \ \mbox{\hyperlink{class_cluster_aee7feb1d599d4c8fda6c3ee83e86ba81}{Cluster}}();}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//Modificadoras}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00040}\mbox{\hyperlink{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}{00040}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a1cf06f2554ac115c239a05ebc8858a6f}{modificar\_cluster}}\ (\textcolor{keywordtype}{string}\ id\_procesador,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_cluster}{Cluster}}\ \&c);\ \textcolor{comment}{//Requiere\ metodo\ privado}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00048}\mbox{\hyperlink{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}{00048}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a4a776db08fb7d4542d0f073c6f94251d}{compactar\_memoria\_procesador}}(\textcolor{keywordtype}{string}\ id\_procesador);}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00055}\mbox{\hyperlink{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}{00055}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a7b9ae511df4a6465f4e191df6564fd77}{compactar\_memoria\_cluster}}();}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00064}\mbox{\hyperlink{class_cluster_a49ec4041303d756070501975822ec374}{00064}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a49ec4041303d756070501975822ec374}{alta\_proceso\_procesador}}(\textcolor{keywordtype}{string}\ id\_procesador,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_proceso}{Proceso}}\ \&job);}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00072}\mbox{\hyperlink{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}{00072}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a3ff597d8b68ecc0e6cec0f716b30107c}{baja\_proceso\_procesador}}(\textcolor{keywordtype}{string}\ id\_procesador,\ \textcolor{keywordtype}{int}\ id\_job);\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00083}\mbox{\hyperlink{class_cluster_acd2dbdeedce25e26896d96d80c2e8910}{00083}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cluster_acd2dbdeedce25e26896d96d80c2e8910}{alta\_proceso}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_proceso}{Proceso}}\ \&job);\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00089}\mbox{\hyperlink{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}{00089}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a3b93301a46cfa8cadf8d0121e234c386}{avanzar\_tiempo}}(\textcolor{keywordtype}{int}\ t);\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00091}00091\ \ \ \ \ \textcolor{comment}{//Consultoras}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00097}\mbox{\hyperlink{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}{00097}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cluster_a8772da6ead2c8971f4cc72a9b1954ab6}{existe\_procesador}}(\textcolor{keywordtype}{string}\ id\_procesador)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00105}\mbox{\hyperlink{class_cluster_abc0cfdec0338e90e8591c2b34ffa1fcf}{00105}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cluster_abc0cfdec0338e90e8591c2b34ffa1fcf}{vacio}}\ (\textcolor{keywordtype}{string}\ id\_procesador)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00113}\mbox{\hyperlink{class_cluster_a3eb1f063ae101ffca06b66e59dc4ac3e}{00113}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cluster_a3eb1f063ae101ffca06b66e59dc4ac3e}{procesador\_ocupado}}\ (\textcolor{keywordtype}{string}\ id\_procesador)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00121}\mbox{\hyperlink{class_cluster_abf3f8552a42aa4c4a1d8956acde49267}{00121}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cluster_abf3f8552a42aa4c4a1d8956acde49267}{existe\_proceso}}(\textcolor{keywordtype}{string}\ id\_procesador,\ \textcolor{keywordtype}{int}\ id\_job)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00128}\mbox{\hyperlink{class_cluster_a47204059e55a4774461c23dc4d751fe7}{00128}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cluster_a47204059e55a4774461c23dc4d751fe7}{espacio\_procesador}}\ (\textcolor{keywordtype}{string}\ id\_procesador)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00130}00130\ \ \ \ \ \textcolor{comment}{//Lectura\ y\ Escriptura}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00137}\mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{00137}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\_cluster}}\ ();\ \textcolor{comment}{//requiere\ metodos\ en\ privado.}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00145}\mbox{\hyperlink{class_cluster_a974c440062deed4ea77a511d42f6629c}{00145}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a974c440062deed4ea77a511d42f6629c}{imprimir\_procesador\_cluster}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00152}\mbox{\hyperlink{class_cluster_a285714ee7b0d682682fbb634d2170f04}{00152}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a285714ee7b0d682682fbb634d2170f04}{imprimir\_estructura\_cluster}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//Requiere\ metodo\ privado.}}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00160}\mbox{\hyperlink{class_cluster_a5379829cce87db8038e42f421ebc8554}{00160}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cluster_a5379829cce87db8038e42f421ebc8554}{imprimir\_procesador}}(\textcolor{keywordtype}{string}\ id\_procesador)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00161}00161\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00162}00162\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00163}00163\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00165}00165\ \};}
+\DoxyCodeLine{\Hypertarget{_cluster_8hh_source_l00166}00166\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
